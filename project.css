@@ -1,41 +1,17 @@
-.content p{
-    background-color: green;
-    color: white;
-}
-
-h1{
-    background-color:blue;
-    color: red;
+.profile{ 
+    background-color: rgb(31, 47, 63);
+    color: white;s
+   
 }
 
 p{
-    background-color: red;
-    color:rgb(125, 12, 230);
+font-size: 20px;
 }
-#college h1{ 
-    background-color: green;
-    color: white;
-}
-img{
-    height: 200px;
-    width: 200px;
-    margin:0px;
-    /*margin-top:100px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    margin-right: 0px;*/
-}
-#pratik {
-    background-color: blue;
-    display: flex;
-
-}
-#pratik p{
-    background-color: blue;
-    color: #ffffff;
-}
-#suju{
-    background-color: aquamarine;
+.bbp{
+    margin: 30px ;
+    background-color:lightgray;
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
 
 }
