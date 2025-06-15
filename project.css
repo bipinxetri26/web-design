@@ -1,17 +1,21 @@
 .profile{ 
     background-color: rgb(31, 47, 63);
-    color: white;s
-   
+    color: white;
+    text-align: center;
+   padding: 20px;
 }
 
 p{
 font-size: 20px;
 }
 .bbp{
-    margin: 30px ;
     background-color:lightgray;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-
+    gap: 50px;
+    justify-content: center;
+}
+.Bipin{
+    background-color:lightgray;
 }

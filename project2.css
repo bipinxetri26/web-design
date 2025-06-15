@@ -1,0 +1,57 @@
+
+
+/* nav bar */
+
+.navigation{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    padding-left: 2rem;
+    justify-content: space-between;
+}
+.nav{
+  list-style-type: none; 
+  display: flex;
+  text-align: center;
+  padding: 0.5rem;
+}
+.nav li{
+    padding-right: 2rem;
+}
+.profile{
+    display: flex;
+    background-color: lightgray;
+    width: 100%;
+    gap: 15%;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+}
+.content{
+    padding-top: 3rem;
+    padding-left: 2rem;
+}
+.content h1{
+    font-size: 60px;
+    margin: 0;
+}
+
+img{
+    width: 80%;
+    padding-top: 3rem;
+}
+.content a{
+    text-decoration: none;
+    color: white;
+}
+.contact{
+  background-color: orange;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+ 
+.contact:hover{
+  transform: scale(1.5);
+}
