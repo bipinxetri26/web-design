@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PixelPort Topup</title>
+  <link rel="stylesheet" href="web.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS (with Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    <!-- nav bar -->
+    <nav>
+        <div class="logo">
+            <a href=""><img src="logo-removebg-preview.png" alt="" width="15%"></a>
+        </div>
+        <div>
+            <ul class="home">
+                <li><a href="#carousel">Home</a></li>
+                <li><a href="#">PixelPort Events</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#contact-me">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- notification and sign in -->
+        <div class="top-bar" style="padding-top: 10px;">
+            <div class="notification">
+                <a href="" style="color: white; text-decoration: none;"><i class="fa-regular fa-bell"></i> Notification</a>
+            </div>
+            <button id="signInBtn"><i class="fa-solid fa-circle-user"></i> Sign In</button>
+            
+            <div id="signinPanel" class="panel">
+                <p class="title">Sign In to Enjoy Exclusive Service</p>
+                <button class="blue-button">Sign in / Sign up</button>
+                
+                <div class="vip-box">
+                    <strong>Midasbuy VIP</strong>
+                    <p>Become VIP to enjoy privileges</p>
+                </div>
+                
+                <ul class="menu">
+                    <li><i class="fa-solid fa-ticket"></i> Coupon</li>
+                    <li><i class="fa-solid fa-sliders"></i> Order Center</li>
+                    <li><i class="fa-solid fa-gear"></i> Account and Security</li>
+                </ul>
+                <!-- Second Sign-In Form Popup -->
+        <div id="authPopup" class="auth-popup">
+            <div class="auth-content">
+               <span id="closeAuth" class="close-btn">&times;</span>
+               <h2>SIGN IN OR SIGN UP</h2>
+            <div class="auth-buttons">
+               <button class="li-pass">LI PASS</button>
+                <button class="google"><a href="https://www.google.com/"><i class="fa-brands fa-google"></i></a></button>
+                <button class="facebook"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></button>
+            </div>
+            <div class="or-divider">or</div>
+                <input type="email" placeholder="Email" class="email-input" />
+                <button class="continue-btn">Continue</button>
+                <p class="passkey-note">
+                Make sure you already have a Passkey <br />
+                <a href="#" style="color: blue;">🔐 Sign in with your Passkey</a>
+                </p>
+             </div>
+        </div>
+
+              <!-- footer   -->
+            <div class="footer">
+                 ✅ Official recharge store by Tencent
+            </div>
+            </div>
+        </div>
+            
+    </nav>
+
+    <!-- carousel start -->
+    <div class="carousel" id="carousel">
+        <div class="container mt-5" style="background-color: rgb(4, 4, 40);">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner shadow-lg">
+                    <div class="carousel-item active">
+                        <img src="./8.1d687b6c.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./820x320.bcee1e1c.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./banner820x320-en.3e63770b.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./jkl.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./mno.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+<!-- Secondary nav box (initially hidden) -->
+<div id="secondaryNavbar" class="secondary-navbar hidden">
+  <div class="secondary-nav-box">
+    <ul class="secondary-nav">
+      <li><a href="#games">POPULAR GAMES</a></li>
+      <li><a href="#about">ABOUT PIXELPORT</a></li>
+      <li><a href="#offer">WHAT WE OFFER</a></li>
+      <li><a href="#payment">PAYMENT PARTNERS</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- popular games -->
+<div id="games" style="margin-top: 0.5rem;">
+
+    <div style="color: white; background-color: rgb(4, 4, 40);padding-top: 50px;">
+        <h1 style="font-size: 30px; text-align: center;">POPULAR GAMES</h1>
+        <section id="popularGamesSection">
+            <div class="images">
+                <a href="">
+                    <img src="[PUBGMOBILE]-brandimage.c135e04c.png" alt="">
+                    <h5>PUBG MOBILE</h5>
+                </a>
+            </div>
+            <div class="images">
+                <a href="">
+                    <img src="[HOK]-brandimage.977e8256.png" alt="">
+                    <h5>HONOR OF KING</h5>
+                </a>
+            </div>
+            <div class="images">
+                <a href="">
+                    <img src="[NBA]-brandimage.1940080d.png" alt="">
+                    <h5>NBA INFINITE</h5>
+                </a>
+            </div>
+            <div class="images">
+                <a href="">
+                    <img src="./[暗区突围]-brandimage.55597ce6.png" alt="">
+                    <h5>ARENA BREAKOUT</h5>
+                </a>
+            </div>
+            <div class="images">
+                <a href="">
+                    <img src="./[黎明觉醒]-brandimage.d246ed03.png" alt="">
+                    <h5>UNDAWN</h5>
+                </a>
+            </div>
+            <div class="images">
+                <a href="">
+                    <img src="hayday-业务入口.faf2e15d.png" alt="">
+                    <h5>DELTA FORCE</h5>
+                </a>
+            </div>
+            <div class="images">
+                <a href="">
+                    <img src="./2521c08ea718fcb2473bf4c7165b4750.png" alt="">
+                    <h5>GRAGONHEIR: <br>SILEN T GODS</h5>
+                </a>
+            </div>
+            <div class="images">
+                <a href="">
+                    <img src="./d76f0ea3a2c48eec7a5591a734e5b8f1.png" alt="">
+                    <h5>ARENA BREAKOUT: <br>INFINITE</h5>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="about" style="margin-top: 0.5rem;">
+
+    <div style="color: white; background-color: rgb(4, 4, 40);padding-top: 50px;">
+        <h1 style="font-size: 30px; text-align: center;">ABOUT PIXELPORT</h1>
+        <section id="aboutPixelport" class="about-section">
+            <div class="about-overlay">
+                <div class="about" style="padding-top: 2rem;">
+                    <h1>PAY SAFE, FAST AND FUN WITH PIXELPORT</h1>
+                    <h3 style="color: white;">Tencent | <img src="logo-removebg-preview.png" alt="" width="20%"></h3>
+                </div>
+                <div class="container">
+                    <p style="font-size: 18px;">
+                        PixelPort is the official recharge store by Tencent. We have established official partnerships with 30 game companies and game studios around the world to jointly create a safe and convenient recharge store for ten of millions players.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div id="offer" class="offer"  style="background-color: rgb(4, 4, 40);margin-top: 0.5rem;">
+    <div style="color: white; background-color: rgb(4, 4, 40);padding-top: 50px;">
+        <h1 style="font-size: 30px; text-align: center;">PIXELPORT CAN OFFER YOU</h1>
+    </div>  
+    <section id="PixelPort-offer" class="PixelPort-offer">
+        <div class="contains">
+            
+            <div class="offer-item">
+                <div class="offer-header">
+                    <div class="offer-number">01</div>
+                    <div class="offer-title">TENCENT X PIXELPORT</div>
+                    <div class="offer-arrow">›</div>
+                </div>
+                <div class="offer-content">
+                    <div class="offer-content-inner">
+                        <div class="offer-subtitle">TENCENT X PIXELPORT USERS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="offer-item">
+                <div class="offer-header">
+                    <div class="offer-number">02</div>
+                    <div class="offer-title">THE LOYALTY OF PIXELPORT USERS</div>
+                <div class="offer-arrow">›</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-content-inner">
+                    <div class="offer-subtitle">TENCENT X PIXELPORT USERS</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offer-item">
+            <div class="offer-header">
+                <div class="offer-number">03</div>
+                <div class="offer-title">PAYMENT SECURITY</div>
+                <div class="offer-arrow">›</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-content-inner">
+                    <div class="offer-subtitle">PAYMENT SECURITY</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offer-item">
+            <div class="offer-header">
+                <div class="offer-number">04</div>
+                <div class="offer-title">PROTECTION OF USER PRIVACY</div>
+                <div class="offer-arrow">›</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-content-inner">
+                    <div class="offer-subtitle">PROTECTION OF USER PRIVACY</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offer-item">
+            <div class="offer-header">
+                <div class="offer-number">05</div>
+                <div class="offer-title">MULTIPLE PAYMENT CHANNELS</div>
+                <div class="offer-arrow">›</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-content-inner">
+                    <div class="offer-subtitle">MULTIPLE PAYMENT CHANNELS</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offer-item">
+            <div class="offer-header">
+                <div class="offer-number">06</div>
+                <div class="offer-title">PROMOTIONS FOR VARIOUS REGION</div>
+                <div class="offer-arrow">›</div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-content-inner">
+                    <div class="offer-subtitle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pic">
+    </div>
+   </section>
+</div>
+
+<div id="payment" style="background-color: rgb(4, 4, 40); margin-top: 0.5rem;">
+     <div style="color: white; background-color: rgb(4, 4, 40);padding-top: 50px;">
+        <h1 style="font-size: 30px; text-align: center;">PAYMENT CHANNEL PARTNERS</h1>
+    </div> 
+    <section class="PixelPort-Payment" id="PixelPort-Payment" >
+
+        <div class="payment-container">
+            <div class="payment-category">
+                <div class="category-title">
+                    <p style="padding-left: 0.5rem; padding-right: 0.3rem;">CREDIT CARD</p>
+                </div>
+                    <div class="payment-method">
+                        <img src="credit card.png" alt="">
+                        <h6>Credit/ Debit/ Prepaid Card</h6>
+                    </div>
+            </div>
+            
+            <div class="payment-category">
+                <div class="category-title">
+                    <p style="padding-left: 1.5rem; padding-right: 1.5rem;">EWALLET</p>
+                </div>
+                <div class="payment-method">
+                    <img src="./paypal.png" alt="">
+                    <h6>PayPal</h6>
+                </div>
+                <div class="payment-method">
+                    <img src="./razar.png" alt="">
+                    <h6>Razer Gold</h6>
+                </div>
+                <div class="payment-method">
+                    <img src="./esewa.png" alt="" width="70%">
+                    <h6>Esewa</h6>
+                </div>
+                <div class="payment-method">
+                    <img src="./khalti.png" alt="" width="80%">
+                    <h6>Khalti</h6>
+                </div>
+                
+            </div>
+            
+            <div class="payment-category">
+                <div class="category-title">
+                    <p style="padding-left: 1.3rem; padding-right: 1rem;">VOUCHER</p>
+                </div>   
+                <div class="payment-method">
+                        <img src="./payas.png" alt="">
+                        <h6>Payasincard</h6>
+                    </div>
+                    <div class="payment-method">
+                        <img src="./razar gold pin.jpg" alt="">
+                        <h6>Razer Gold Pin</h6>
+                    </div>   
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div id="contact-me" style="background-color: rgb(4, 4, 40); margin-top: 0.5rem;">
+     <div style="color: white; background-color: rgb(4, 4, 40);padding-top: 50px;">
+        <h1 style="font-size: 30px; text-align: center;">CONTACT</h1>
+    </div>
+<section>
+        <div class="contact" id="contact">
+        <div class="contact-info">
+            <p><a href="https://mail.google.com/mail/u/0/#inbox"><i>📧</i> pixelport@gmail.com</a></p>
+            <p><a href="https://www.google.com/maps/place/Butwal/@27.6821906,83.3501332,12z/data=!3m1!4b1!4m6!3m5!1s0x3996864275d9755f:0x2b1e92d89d4bb3ae!8m2!3d27.6982813!4d83.4652861!16zL20vMGYyOXMw?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D"><i>📍</i> Butwal, Nepal</a></p>
+            <p><i>📞</i> 9746702728</p>
+            <p><i><i class="fa-brands fa-facebook"></i></i> <a href="https://www.facebook.com/bipin.chettri.nep">Bipin Basnet</a></p>
+        </div>
+
+        <div class="contact-form">
+        <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Subject" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        </form>
+        </div>
+    </div>
+</section>
+<footer style="background-color: orange; text-align: center; height: 5vh;;">
+    Terms of Service | Privacy Policy | Cookie Policy | Cookies Preference | Copyright ©High Morale Developments Limited. All rights reserved
+</footer>
+</div>
+</body>
+<script src="./web.js"></script>
+</html>
