@@ -9,18 +9,22 @@
 .nav{
    background-color:white;
    width:100%;
-   height: 3rem;
    display: flex;
-   gap: 50%;
-   position: fixed;
-
+   position: sticky;
+   justify-content: space-between;
+   top: 0;
 }
 .navigation{
    padding: 1rem;
+   list-style-type: none;
+   display: flex;
 }   
 .navigation a{
     text-decoration: none;
     padding-left: 3rem;
+}
+select{
+   display: none;
 }
 
 .profile{
@@ -35,11 +39,17 @@
 }
 /* navigation bar end */
 
+
+
+
+
+
 /* main profile start */
 .main{
     padding-top: 4rem;
      background-color: rgba(9, 32, 117, 0.785);
      width: 100%;
+     background-image: linear-gradient(rgb(18, 18, 102), rgb(136, 167, 234));
 }
 img{
    width: 46vh;
@@ -87,7 +97,6 @@ display: inline-block;
 /* about me start*/
 .section{
    padding-top: 5rem;
-   text-align: center;
    font-size: 18px;
    background-color: #fdfcfc;
    
@@ -97,11 +106,12 @@ display: inline-block;
    font-weight: 400px;
    position: relative;
    color: var(--text-black-900);
+   text-align: center;
 }
 .section p{
    text-align: left;
-   padding-left: 13rem;
-   padding-right: 13rem;
+   padding-left: 100px;
+   padding-right: 100px;
 }
 /* about me end */
 
@@ -179,3 +189,48 @@ display: inline-block;
    padding-top: 1rem;
    font-size: 20px;
 }
+
+
+/* media start */
+@media (max-width:768px) {
+   nav{
+      display: flex;
+      
+   }
+   .navigation{
+      display: none;
+   }
+   select{
+      display: flex;
+   }
+   .section p{
+      text-align: left;
+      padding: 20px;
+      
+   }
+   .contact{
+      text-align: left;
+      flex-direction: column;
+      margin: 0;
+      padding: 60px;
+       justify-content: center;
+
+   }
+   .contact-info{
+      width:fit-content;
+   }
+   img{
+   width: 40vh;
+   height: 40vh;
+   padding-bottom: 10rem;
+   
+}
+.pic{
+   background-color:lightslategray;
+   border-radius: 50%;
+   width: 40vh;
+   height: 40vh;
+   padding: 0.5rem;
+}
+}
+

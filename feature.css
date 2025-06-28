@@ -1,26 +1,103 @@
 *{
     margin: 0;
+    padding: 0;
+}
+/* nav bar */
+nav{
+    background-color:lightseagreen;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+.logo1{
+    list-style-type: none;
+    display: flex;
+}
+.logo1 li{
+    padding-right: 3rem;
+}
+.logo1 a{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
 }
 
-.main{
-    background-color: blueviolet;
-    color: white;
-    width: 100%;
-    text-align: center;
-}
-.box{
-    border-width: 1000px;
-    border-color: aqua;
-}
-.one{
-    height: 20vh;
-    background-color: rgb(51, 6, 201);
-}
-.one h1{
-    padding-top: 2rem;
-}
-.two{
-    background-color: white;
+/* main section start */
+
+/* section intro */
+.intro{
+    display: flex;
+    background-color:lightgray;
+    margin-top: 3vh;
     color: black;
+    padding: 3vh 3vh 2vh 2vh;
+    justify-content: space-between;
+}
+.intro1{
+    padding-top: 2rem;
+    padding-left: 4rem;
+}
+.intro2 img{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    border: 4px solid rgb(42, 9, 131);
+}
+.intro1 a button{
+    background-color:white;
+    color: blue;
+    border-radius: 6px;
+    padding: 4px;
+   margin-top: 40px;
+   margin-left: 20px;
+   cursor: pointer;
+   
+}
+.intro1 a button:hover{
+  color:red ;
+  transform: scale(1.1);
+}
+
+/* section about */
+.about{
+    background-color:lightgray;
+    margin-top: 3vh;
+}
+.about1 h2{
+    text-align: center;
+    color: orangered;
+}
+.about1 p{
     text-align: left;
+    padding-left: 4rem;
+    padding-right: 3rem;
+}
+
+/* section education */
+.education{
+    background-color:lightgray;
+    margin-top: 3vh;
+    display: flex;
+    padding: 3vh;
+}
+.education div{
+    padding-left: 5vh;
+}
+.education div legend button{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+
+}
+.education h2{
+    color: orangered;
 }
