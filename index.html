@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 <title>Special Birthday for Alina</title>
+=======
+<title>Special Birthday for Sadhana</title>
+>>>>>>> 3c22427367b387f43cd58e7e7cff643a462fdb74
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -585,7 +589,11 @@ section {
   }
   
   .music-control i {
+<<<<<<< HEAD
     font-size: 20.5px;
+=======
+    font-size: 20px;
+>>>>>>> 3c22427367b387f43cd58e7e7cff643a462fdb74
   }
 }
 
@@ -635,10 +643,17 @@ section {
 
 <!-- Stage 1 -->
 <section id="stage1">
+<<<<<<< HEAD
   <h1>🎉 Happy Birthday Alina Rayamajhi 🎉</h1>
   <div class="content">
     <div class="photo-container">
       <img src="WhatsApp Image 2025-12-30 at 7.21.31 PM.jpeg" alt="Photo of Alina">
+=======
+  <h1>🎉 Happy Birthday Sadhana 🎉</h1>
+  <div class="content">
+    <div class="photo-container">
+      <img src="IMG-20250926-WA0005.jpg" alt="Photo of Sadhana">
+>>>>>>> 3c22427367b387f43cd58e7e7cff643a462fdb74
       <div class="heart">❤️</div>
     </div>
     <div class="cake-container">
@@ -648,12 +663,20 @@ section {
         <div class="candle c3"></div>
         <div class="candle c4"></div>
       </div>
+<<<<<<< HEAD
       <div class="cake-name">❤️ Berali 😻 ❤️</div>
+=======
+      <div class="cake-name">❤️ Bunny 🐰 ❤️</div>
+>>>>>>> 3c22427367b387f43cd58e7e7cff643a462fdb74
     </div>
   </div>
   <button id="readyBtn">Are You Ready For Next Surprise?</button>
   <div class="btns">
+<<<<<<< HEAD
     <button onclick="window.location.href='wish.html'">Yes 💖</button>
+=======
+    <button onclick="goToStage(2)">Yes 💖</button>
+>>>>>>> 3c22427367b387f43cd58e7e7cff643a462fdb74
     <button onclick="goToStage(2)">No 😒</button>
   </div>
 </section>
@@ -667,6 +690,7 @@ section {
 <!-- Stage 3 - Memory Carousel -->
 <section id="stage3">
   <div class="floating-header">
+<<<<<<< HEAD
     <h2>Happy birthday Sana💕</h2>
     <p>Our beautiful memories as we spend time together in these three years❣️</p>
   </div>
@@ -685,6 +709,26 @@ section {
     </div>
     <div class="memory-photo" data-index="4">
       <img src="f.jpeg" alt="Birthday Memory 5">
+=======
+    <h2>Happy birthday sadhana💕</h2>
+    <p>Every steps be greatfull ❣️</p>
+  </div>
+  <div class="carousel-container">
+    <div class="memory-photo active" data-index="0">
+      <img src="IMG-20250926-WA0004.jpg" alt="Birthday Memory 1">
+    </div>
+    <div class="memory-photo" data-index="1">
+      <img src="IMG-20250926-WA0010.jpg" alt="Birthday Memory 2">
+    </div>
+    <div class="memory-photo" data-index="2">
+      <img src="IMG-20250926-WA0008.jpg" alt="Birthday Memory 3">
+    </div>
+    <div class="memory-photo" data-index="3">
+      <img src="WhatsApp Image 2025-09-26 at 22.18.17_e1a348c3.jpg" alt="Birthday Memory 4">
+    </div>
+    <div class="memory-photo" data-index="4">
+      <img src="IMG-20250926-WA0009.jpg" alt="Birthday Memory 5">
+>>>>>>> 3c22427367b387f43cd58e7e7cff643a462fdb74
     </div>
   </div>
   <div class="navigation-dots">
@@ -696,6 +740,7 @@ section {
   </div>
 </section>
 
+<<<<<<< HEAD
 <script>
 // Wait for page to load
 // window.addEventListener('load', function() {
@@ -729,12 +774,44 @@ window.addEventListener('load', function() {
 });
 
 
+=======
+<!-- Music Control -->
+<div class="music-control" id="musicToggle">
+  <i id="musicIcon">🎵</i>
+</div>
+
+<!-- Audio Element -->
+<audio id="backgroundMusic" loop>
+  <source src="https://www.youtube.com/watch?v=S6ZxkZRElg4&list=RDS6ZxkZRElg4&start_radio=1" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+// Wait for page to load
+window.addEventListener('load', function() {
+  // Hide loading screen after a short delay
+  setTimeout(function() {
+    document.getElementById('loading').style.opacity = '0';
+    setTimeout(function() {
+      document.getElementById('loading').style.display = 'none';
+    }, 500);
+  }, 1500);
+  
+  // Start with stage 1
+  goToStage(1);
+});
+
+>>>>>>> 3c22427367b387f43cd58e7e7cff643a462fdb74
 // Stage 2 typing
 const letterBox = document.getElementById("letterBox");
 const nextBtn = document.getElementById("nextBtn");
 
 function typeSentence(index) {
+<<<<<<< HEAD
   const letterText = ["Alina I have'nt imagine that these past two years of getting to know you have been incredible. Whenever I talked and sharing small thing also makes much happier just by being in it. It's more than just friendship for me now. The truth is,I am falling in love with you day by day❤️😘 <br> I love you❤️❤️"];
+=======
+  const letterText = ["Sadhana🙂‍↔️ I have'nt imagine that these past two years of getting to know you have been incredible. Whenever I talked and sharing small thing also makes much happier just by being in it. It's more than just friendship for me now. The truth is,I am falling in love with you day by day❤️😘 <br> I love you❤️❤️"];
+>>>>>>> 3c22427367b387f43cd58e7e7cff643a462fdb74
   
   if (index >= letterText.length) {
     nextBtn.style.display = "inline-block";
