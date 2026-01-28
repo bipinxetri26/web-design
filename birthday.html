@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Birthday for Alina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  margin:0; 
+  font-family: 'Inter', sans-serif; 
+  overflow-x: hidden; 
+  background: #000;
+}
+
+section { 
+  display: none; 
+  min-height: 100vh; 
+  width: 100vw; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* ===== Stage 1 ===== */
+#stage1 { 
+  background: linear-gradient(120deg,#ff6a95,#ffbcaf,#ffd6a5,#a0e7e5); 
+  background-size: 400% 400%; 
+  animation: gradientBGStage1 15s ease infinite; 
+  text-align: center;
+  position: relative;
+}
+
+@keyframes gradientBGStage1 {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+#stage1 h1 { 
+  color: #fff; 
+  text-shadow: 2px 2px 6px rgba(0,0,0,.3); 
+  margin-bottom: 20px; 
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  opacity: 0; 
+  transform: translateY(-50px); 
+  animation: fadeInDown 1.5s ease forwards;
+  font-family: 'Playfair Display', serif;
+}
+
+@keyframes fadeInDown { 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+.content { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 20px; 
+  margin-bottom: 20px; 
+  position: relative; 
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+}
+
+.photo-container { 
+  position: relative; 
+  width: min(320px, 90vw); 
+  height: min(240px, 65vw); 
+  border-radius: 15px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 20px rgba(0,0,0,.3); 
+  background: #fff; 
+  opacity: 0; 
+  transform: translateX(-100px); 
+  animation: slideInLeft 2s ease forwards 1s;
+}
+
+@keyframes slideInLeft { 
+  to { opacity: 1; transform: translateX(0); } 
+}
+
+.photo-container img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.heart { 
+  position: absolute; 
+  bottom: 15px; 
+  right: 15px; 
+  font-size: clamp(30px, 8vw, 50px); 
+  color: red; 
+  animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse { 
+  0% { transform: scale(1); } 
+  50% { transform: scale(1.3); } 
+  100% { transform: scale(1); } 
+}
+
+/* Cake */
+.cake-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cake { 
+  position: relative; 
+  width: min(200px, 50vw); 
+  height: min(120px, 30vw); 
+  background: #8b4513; 
+  border-radius: 0 0 20px 20px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,.3); 
+  opacity: 0; 
+  transform: scale(.5); 
+  animation: cakeBaseIn 1s ease forwards 2s; 
+}
+
+@keyframes cakeBaseIn { 
+  to { opacity: 1; transform: scale(1); } 
+}
+
+.cake::before { 
+  content: ""; 
+  position: absolute; 
+  top: -35px; 
+  left: 15px; 
+  width: calc(100% - 30px); 
+  height: 35px; 
+  background: #fff; 
+  border-radius: 15px 15px 0 0; 
+  opacity: 0; 
+  transform: translateY(-20px); 
+  animation: icingIn 1s ease forwards 3s; 
+}
+
+@keyframes icingIn { 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+.candle { 
+  position: absolute; 
+  width: 8px; 
+  height: 25px; 
+  background: white; 
+  top: -45px; 
+  border-radius: 5px; 
+  opacity: 0; 
+}
+
+.candle::before { 
+  content: ""; 
+  position: absolute; 
+  top: -12px; 
+  left: 2px; 
+  width: 6px; 
+  height: 15px; 
+  background: orange; 
+  border-radius: 50%; 
+  animation: flicker .3s infinite alternate; 
+}
+
+@keyframes flicker { 
+  from { opacity: .6; transform: scaleY(.9); } 
+  to { opacity: 1; transform: scaleY(1); } 
+}
+
+.c1 { left: 20%; animation: candleIn .5s ease forwards 4s; }
+.c2 { left: 35%; animation: candleIn .5s ease forwards 4.5s; }
+.c3 { left: 65%; animation: candleIn .5s ease forwards 5s; }
+.c4 { left: 80%; animation: candleIn .5s ease forwards 5.5s; }
+
+@keyframes candleIn { 
+  to { opacity: 1; } 
+}
+
+.cake-name { 
+  text-align: center; 
+  font-weight: bold; 
+  font-size: clamp(14px, 4vw, 18px); 
+  color: white; 
+  text-shadow: 1px 1px 2px #000; 
+  opacity: 0; 
+  animation: nameFade 1s ease forwards 6s; 
+}
+
+@keyframes nameFade { 
+  to { opacity: 1; } 
+}
+
+/* Buttons */
+#readyBtn { 
+  margin-bottom: 20px; 
+  padding: 12px 25px; 
+  border: none; 
+  border-radius: 12px; 
+  font-size: clamp(16px, 4vw, 20px); 
+  cursor: pointer; 
+  background: #ffd700; 
+  color: #000; 
+  font-weight: bold; 
+  box-shadow: 0 4px 10px rgba(0,0,0,.3); 
+  animation: moveSide 2s infinite alternate, rotateScale 3s infinite alternate; 
+  font-family: 'Inter', sans-serif;
+}
+
+#readyBtn:hover { 
+  background: #ffbf00; 
+}
+
+@keyframes moveSide {
+  0% { transform: translateX(-5px); }
+  100% { transform: translateX(5px); }
+}
+
+@keyframes rotateScale {
+  0% { transform: rotate(-2deg) scale(1); }
+  50% { transform: rotate(2deg) scale(1.05); }
+  100% { transform: rotate(-2deg) scale(1); }
+}
+
+.btns { 
+  margin-top: 15px; 
+  display: flex; 
+  gap: 15px; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.btns button { 
+  padding: 12px 20px; 
+  border: none; 
+  border-radius: 12px; 
+  font-size: clamp(14px, 4vw, 18px); 
+  cursor: pointer; 
+  background: #ff4d6d; 
+  color: #fff; 
+  transition: background .3s; 
+  font-family: 'Inter', sans-serif;
+  min-width: 120px;
+}
+
+.btns button:hover { 
+  background: #d6336c; 
+}
+
+/* ===== Stage 2 ===== */
+#stage2 { 
+  background: linear-gradient(135deg,#ffecd2,#fcb69f,#ff9a9e,#fad0c4); 
+  background-size: 400% 400%; 
+  animation: gradientBGStage2 15s ease infinite, zoomInStage2 3s ease forwards; 
+  position: relative; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  padding: 20px;
+}
+
+@keyframes gradientBGStage2 { 
+  0% { background-position: 0% 50%; } 
+  25% { background-position: 50% 100%; } 
+  50% { background-position: 100% 50%; } 
+  75% { background-position: 50% 0%; } 
+  100% { background-position: 0% 50%; } 
+}
+
+@keyframes zoomInStage2 { 
+  from { transform: scale(1.2); opacity: 0; } 
+  to { transform: scale(1); opacity: 1; } 
+}
+
+.rect-box { 
+  width: 90%; 
+  max-width: 600px; 
+  padding: 25px; 
+  border-radius: 20px; 
+  box-shadow: 0 4px 20px rgba(0,0,0,.3); 
+  position: relative; 
+  z-index: 10; 
+  font-family: 'Dancing Script', cursive; 
+  font-size: clamp(16px, 4vw, 22px); 
+  line-height: 1.6; 
+  white-space: pre-wrap; 
+  color: #fff; 
+  background: linear-gradient(45deg,#ff9a9e,#fad0c4,#a18cd1,#fbc2eb); 
+  background-size: 400% 400%; 
+  animation: boxColor 8s ease infinite, boxZoomIn 2s ease forwards; 
+  opacity: 0; 
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes boxColor { 
+  0% { background-position: 0% 50%; } 
+  25% { background-position: 50% 100%; } 
+  50% { background-position: 100% 50%; } 
+  75% { background-position: 50% 0%; } 
+  100% { background-position: 0% 50%; } 
+}
+
+@keyframes boxZoomIn { 
+  to { opacity: 1; transform: scale(1); } 
+}
+
+#nextBtn { 
+  margin-top: 25px; 
+  padding: 15px 40px; 
+  border: none; 
+  border-radius: 15px; 
+  font-size: clamp(16px, 4vw, 20px); 
+  cursor: pointer; 
+  background: linear-gradient(135deg,#ff7eb9,#ff65a3,#7afcff); 
+  color: #fff; 
+  font-weight: bold; 
+  box-shadow: 0 6px 15px rgba(0,0,0,.3); 
+  display: none; 
+  font-family: 'Inter', sans-serif;
+}
+
+#nextBtn:hover { 
+  background: linear-gradient(135deg,#ff65a3,#ff7eb9,#7afcff); 
+}
+
+/* ===== Stage 3 - Memory Carousel ===== */
+#stage3 { 
+  min-height: 100vh; 
+  width: 100%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  overflow: hidden; 
+  background: linear-gradient(135deg, #e91e63, #9c27b0, #ffc107); 
+  background-size: 400% 400%; 
+  animation: gradientShift 18s ease infinite; 
+  flex-direction: column; 
+  padding: 20px;
+}
+
+.carousel-container { 
+  position: relative; 
+  width: 100%; 
+  max-width: min(600px, 90vw); 
+  height: auto; 
+  aspect-ratio: 1/1; 
+  margin: 0 auto; 
+}
+
+.memory-photo { 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  width: 80%; 
+  max-width: 320px; 
+  height: auto; 
+  aspect-ratio: 1/1; 
+  border-radius: 16px; 
+  overflow: hidden; 
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+  opacity: 0.6; 
+  z-index: 10; 
+}
+
+.memory-photo.active { 
+  opacity: 1; 
+  transform: translate(-50%, -50%) scale(1); 
+  z-index: 20; 
+}
+
+.memory-photo:not(.active) { 
+  transform: translate(-50%, -50%) scale(0.9); 
+}
+
+.memory-photo img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.memory-photo::after { 
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent); 
+}
+
+.navigation-dots { 
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: flex; 
+  gap: 12px; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  z-index: 30;
+}
+
+.dot { 
+  width: 12px; 
+  height: 12px; 
+  border-radius: 50%; 
+  background: rgba(255,255,255,0.5); 
+  cursor: pointer; 
+  border: none; 
+  transition: all 0.3s ease; 
+}
+
+.dot.active { 
+  background: white; 
+  transform: scale(1.25); 
+}
+
+.dot:hover { 
+  background: rgba(255,255,255,0.75); 
+}
+
+.floating-header { 
+  position: absolute; 
+  top: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  text-align: center; 
+  animation: floatGentle 3s ease-in-out infinite; 
+  padding: 0 10px; 
+  width: 100%;
+  max-width: 600px;
+  z-index: 25;
+}
+
+.floating-header h2 { 
+  font-family: 'Playfair Display', serif; 
+  font-size: clamp(1.8rem, 5vw, 2.5rem); 
+  font-weight: 700; 
+  color: white; 
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+  margin-bottom: 6px; 
+}
+
+.floating-header p { 
+  font-family: 'Dancing Script', cursive; 
+  font-size: clamp(1rem, 3vw, 1.2rem); 
+  color: rgba(255,255,255,0.9); 
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); 
+}
+
+@keyframes gradientShift { 
+  0%, 100% { background-position: 0% 50%; } 
+  25% { background-position: 50% 100%; } 
+  50% { background-position: 100% 50%; } 
+  75% { background-position: 50% 0%; } 
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .photo-container, .cake-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .cake {
+    width: min(180px, 60vw);
+    height: min(110px, 35vw);
+  }
+  
+  .btns {
+    gap: 10px;
+  }
+  
+  .btns button {
+    min-width: 100px;
+  }
+  
+  .rect-box {
+    padding: 20px;
+  }
+  
+  .carousel-container {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 15px;
+  }
+  
+  #stage1 h1 {
+    margin-bottom: 15px;
+  }
+  
+  .content {
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .photo-container {
+    height: min(200px, 60vw);
+  }
+  
+  .cake {
+    width: min(160px, 70vw);
+    height: min(100px, 40vw);
+  }
+  
+  .cake::before {
+    height: 30px;
+    top: -30px;
+  }
+  
+  .candle {
+    height: 20px;
+    top: -40px;
+  }
+  
+  .candle::before {
+    height: 12px;
+    top: -10px;
+  }
+  
+  .btns {
+    gap: 8px;
+  }
+  
+  .btns button {
+    padding: 10px 15px;
+    min-width: 90px;
+  }
+  
+  #nextBtn {
+    padding: 12px 30px;
+  }
+  
+  .floating-header {
+    top: 10px;
+  }
+  
+  .navigation-dots {
+    bottom: 10px;
+  }
+  
+  .music-control {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .music-control i {
+    font-size: 20px;
+  }
+}
+
+/* Loading screen */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff6a95, #a0e7e5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+}
+</style>
+</head>
+<body>
+<!-- Loading Screen -->
+<div id="loading">
+  <div class="loader"></div>
+  <div class="loading-text">Loading Special Birthday Surprise...</div>
+</div>
+
+<!-- Stage 1 -->
+<section id="stage1">
+  <h1>🎉 Happy Birthday Alina Rayamajhi 🎉</h1>
+  <div class="content">
+    <div class="photo-container">
+      <img src="WhatsApp Image 2025-12-30 at 7.21.31 PM.jpeg" alt="Photo of Alina">
+      <div class="heart">❤️</div>
+    </div>
+    <div class="cake-container">
+      <div class="cake">
+        <div class="candle c1"></div>
+        <div class="candle c2"></div>
+        <div class="candle c3"></div>
+        <div class="candle c4"></div>
+      </div>
+      <div class="cake-name">❤️ Berali 😻 ❤️</div>
+    </div>
+  </div>
+  <button id="readyBtn">Are You Ready For Next Surprise?</button>
+  <div class="btns">
+    <button onclick="window.location.href='wish.html'">Yes 💖</button>
+    <button onclick="goToStage(2)">No 😒</button>
+  </div>
+</section>
+
+<!-- Stage 2 -->
+<section id="stage2">
+  <div class="rect-box" id="letterBox"></div>
+  <button id="nextBtn" onclick="goToStage(3)">Next Surprise 🎁</button>
+</section>
+
+<!-- Stage 3 - Memory Carousel -->
+<section id="stage3">
+  <div class="floating-header">
+    <h2>Happy birthday Sana💕</h2>
+    <p>Our beautiful memories as we spend time together in these three years❣️</p>
+  </div>
+  <div class="carousel-container">
+    <div class="memory-photo active" data-index="0">
+      <img src="g.jpeg" alt="Birthday Memory 1" style=" transform: rotate(270deg);">
+    </div>
+    <div class="memory-photo" data-index="1">
+      <img src="c.jpeg" alt="Birthday Memory 2">
+    </div>
+    <div class="memory-photo" data-index="2">
+      <img src="b.jpeg" alt="Birthday Memory 3">
+    </div>
+    <div class="memory-photo" data-index="3">
+      <img src="e.jpeg" alt="Birthday Memory 4">
+    </div>
+    <div class="memory-photo" data-index="4">
+      <img src="f.jpeg" alt="Birthday Memory 5">
+    </div>
+  </div>
+  <div class="navigation-dots">
+    <button class="dot active" onclick="goToSlide(0)"></button>
+    <button class="dot" onclick="goToSlide(1)"></button>
+    <button class="dot" onclick="goToSlide(2)"></button>
+    <button class="dot" onclick="goToSlide(3)"></button>
+    <button class="dot" onclick="goToSlide(4)"></button>
+  </div>
+</section>
+
+<script>
+
+window.addEventListener('load', function() {
+    // Hide loading screen
+    setTimeout(function() {
+        document.getElementById('loading').style.opacity = '0';
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'none';
+        }, 500);
+    }, 1500);
+
+    // Check URL hash
+    const hash = window.location.hash;
+    if(hash === '#stage3') {
+        goToStage(3); // go directly to Stage 3
+    } else {
+        goToStage(1); // default stage
+    }
+});
+
+
+// Stage 2 typing
+const letterBox = document.getElementById("letterBox");
+const nextBtn = document.getElementById("nextBtn");
+
+function typeSentence(index) {
+  const letterText = ["Alina I have'nt imagine that these past two years of getting to know you have been incredible. Whenever I talked and sharing small thing also makes much happier just by being in it. It's more than just friendship for me now. The truth is,I am falling in love with you day by day❤️😘 <br> I love you❤️❤️"];
+  
+  if (index >= letterText.length) {
+    nextBtn.style.display = "inline-block";
+    return;
+  }
+  
+  const sentence = letterText[index];
+  let i = 0;
+  
+  function type() {
+    if (i <= sentence.length) {
+      letterBox.innerHTML = letterText.slice(0, index).join('<br>') + 
+                           (index > 0 ? '<br>' : '') + 
+                           sentence.substring(0, i);
+      i++;
+      setTimeout(type, 50); // Faster typing for better experience
+    } else {
+      setTimeout(() => {
+        typeSentence(index + 1);
+      }, 500);
+    }
+  }
+  type();
+}
+
+// Stage navigation
+function goToStage(num) {
+  document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+  document.getElementById("stage" + num).style.display = "flex";
+  
+  if (num === 2) {
+    letterBox.innerHTML = "";
+    nextBtn.style.display = "none";
+    setTimeout(() => {
+      typeSentence(0);
+    }, 500);
+  }
+  
+  if (num === 3) {
+    startCarousel();
+  }
+}
+
+// Stage 3 Carousel
+let currentIndex = 0;
+const photos = document.querySelectorAll('.memory-photo');
+const dots = document.querySelectorAll('.dot');
+let autoSlideInterval;
+
+function goToSlide(index) {
+  photos.forEach(photo => photo.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  
+  photos[index].classList.add('active');
+  dots[index].classList.add('active');
+  
+  // Adjust positioning for responsive layout
+  photos.forEach((photo, i) => {
+    const offset = (i - index) * (window.innerWidth < 768 ? 250 : 320);
+    photo.style.transform = `translate(-50%, -50%) translateX(${offset}px) scale(${i === index ? 1 : 0.9})`;
+    photo.style.zIndex = i === index ? 20 : 10 - Math.abs(i - index);
+  });
+  
+  currentIndex = index;
+}
+
+function startCarousel() {
+  // Clear any existing interval
+  if (autoSlideInterval) {
+    clearInterval(autoSlideInterval);
+  }
+  
+  // Start new interval
+  autoSlideInterval = setInterval(() => {
+    const nextIndex = (currentIndex + 1) % photos.length;
+    goToSlide(nextIndex);
+  }, 3500);
+}
+
+// Dot clicks
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    goToSlide(index);
+    // Reset the auto-slide interval
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+      startCarousel();
+    }
+  });
+});
+
+
+// Adjust carousel on window resize
+window.addEventListener('resize', function() {
+  if (document.getElementById('stage3').style.display === 'flex') {
+    goToSlide(currentIndex);
+  }
+});
+ 
+</script>
+</body>
+</html>
