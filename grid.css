@@ -1,0 +1,84 @@
+:root{
+--text: #160913;
+--background: #fdfbfd;
+--primary: #bb52a7;
+--secondary: #daaca2;
+--accent: #cba37a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    background-color: bisque;
+    justify-content: space-between;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+}
+nav a{
+    text-decoration: none;
+}
+.hi{
+    display: flex;
+    list-style-type: none;
+}
+.hi li{
+    padding-right: 3rem;
+}
+/* grid */
+section{
+    background-image: linear-gradient(blue, white);
+}
+.card{
+    border: 2px solid black;
+}
+.demo-card{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    margin-top: 20px;
+}
+@media(max-width: 700px){
+    .demo-card{
+        grid-template-columns: auto;
+    }
+    .card{
+        border: 2px solid red;
+    }
+}
+h3{
+    text-shadow: 5px 5px;
+}
+
+/* 2d animation */
+.box3d{
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    margin: 3rem;
+    padding: 5rem;
+    color: white;
+   transition: width 2s linear 1s;
+
+}
+.box3d:hover{
+    width: 100px;
+}
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+.animation{
+    width: 100px;
+    height: 100px;
+    background-color:var(--background);
+    color: var(--primary);
+    animation-name: example;
+    animation-duration: 4s;
+}
