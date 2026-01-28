@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <div class="logo-icon">BB</div>
+                    <div>Bipin <span>Basnet</span></div>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>I'm Bipin Basnet</h1>
+                    <div class="profession-rotator">
+                        <ul class="profession-list">
+                            <li>Video Editor</li>
+                            <li>Graphics Designer</li>
+                            <li>Web Developer</li>
+                            <li>UI/UX Designer</li>
+                        </ul>
+                    </div>
+                    <p>Creating stunning visual experiences through expert video editing, graphic design, web development, and intuitive user interfaces. Transforming ideas into reality with passion and precision.</p>
+                    <div class="cta-buttons">
+                        <a href="#portfolio" class="btn">
+                            <i class="fas fa-play-circle"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <div class="profile-frame"></div>
+                        <img src="WhatsApp Image 2025-11-19 at 16.06.52_8779a979.jpg" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element floating-1">
+            <div class="skill-icon">
+                <i class="fas fa-video"></i>
+            </div>
+            <p>Video Editing</p>
+        </div>
+        <div class="floating-element floating-2">
+            <div class="skill-icon">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <p>Graphics Design</p>
+        </div>
+        <div class="floating-element floating-3">
+            <div class="skill-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <p>Web Development</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Creative Professional & Digital Expert</h3>
+                    <p>With over 1 years of experience in the digital creative industry, I specialize in bringing ideas to life across multiple disciplines. My unique blend of skills in video editing, graphic design, web development, and UI/UX design allows me to deliver comprehensive digital solutions.</p>
+                    <p>I approach every project with a holistic perspective, understanding that great digital experiences require both technical excellence and artistic vision. From concept to completion, I ensure every detail aligns with the project's goals and exceeds expectations.</p>
+                    <p>My passion lies in creating work that not only looks exceptional but also performs flawlessly and delivers real results for clients across various industries.</p>
+                    <a href="#contact" class="btn">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h4>Video Editing</h4>
+                        <p>Expert in Premiere Pro, After Effects, and DaVinci Resolve. Specializing in corporate videos, commercials, and social media content.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Graphics Design</h4>
+                        <p>Mastery of Adobe Creative Suite for branding, print design, digital graphics, and visual identity systems.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Web Development</h4>
+                        <p>Full-stack development with modern technologies: React, Node.js, Python, and responsive front-end frameworks.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h4>UI/UX Design</h4>
+                        <p>Designing intuitive user interfaces and engaging user experiences for web and mobile applications with user-centric approach.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="video">Video Editing</button>
+                <button class="filter-btn" data-filter="graphics">Graphic Design</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Video Editing Projects -->
+                <div class="portfolio-item" data-category="video">
+                    <div class="portfolio-img">
+                        <video muted loop poster="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                            <source src="lv_0_20251216143747.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Video Editing</span>
+                            <span class="tag">Corporate</span>
+                        </div>
+                        <h3>Tech Conference Highlights</h3>
+                        <p>Multi-camera editing for major tech conference, including color grading and audio mastering.</p>
+                    </div>
+                </div>
+
+                <!-- Graphic Design Projects -->
+                <div class="portfolio-item" data-category="graphics">
+                    <div class="portfolio-img">
+                        <img src="berger.jpg" alt="Brand Identity Design">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Graphic Design</span>
+                            <span class="tag">Branding</span>
+                        </div>
+                        <h3>Food</h3>
+                        <p>Attractive food image for hotel and resturent advertisement </p>
+                    </div>
+                </div>
+                <!-- Graphic Design Projects -->
+                <div class="portfolio-item" data-category="graphics">
+                    <div class="portfolio-img">
+                        <img src="farming.jpg" alt="Brand Identity Design">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Graphic Design</span>
+                            <span class="tag">Branding</span>
+                        </div>
+                        <h3>Farming</h3>
+                        <p>Attractive image for Farming advertisement </p>
+                    </div>
+                </div>
+                <!-- Graphic Design Projects -->
+                <div class="portfolio-item" data-category="graphics">
+                    <div class="portfolio-img">
+                        <img src="drink.jpg" alt="Brand Identity Design">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Graphic Design</span>
+                            <span class="tag">Branding</span>
+                        </div>
+                        <h3>Drink</h3>
+                        <p>Attractive image drink advertisement </p>
+                    </div>
+                </div>
+                <!-- Graphic Design Projects -->
+                <div class="portfolio-item" data-category="graphics">
+                    <div class="portfolio-img">
+                        <img src="samosa.jpg" alt="Brand Identity Design">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Graphic Design</span>
+                            <span class="tag">Branding</span>
+                        </div>
+                        <h3>Food</h3>
+                        <p>Attractive food image for hotel and resturent advertisement </p>
+                    </div>
+                </div>
+
+                <!-- Web Development Projects -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Website">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Web Development</span>
+                            <span class="tag">E-commerce</span>
+                        </div>
+                        <h3>E-commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with payment integration and admin dashboard.</p>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design Projects -->
+                <div class="portfolio-item" data-category="ui">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile App Design">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">UI/UX Design</span>
+                            <span class="tag">Mobile App</span>
+                        </div>
+                        <h3>Fitness App UI/UX</h3>
+                        <p>Complete user experience design for fitness tracking mobile application.</p>
+                    </div>
+                </div>
+
+                <!-- Video Editing Project 2 -->
+                <div class="portfolio-item" data-category="video">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Documentary Film">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Video Editing</span>
+                            <span class="tag">Documentary</span>
+                        </div>
+                        <h3>Environmental Documentary</h3>
+                        <p>Feature-length documentary editing with archival footage integration and narrative structuring.</p>
+                    </div>
+                </div>
+
+                <!-- Graphic Design Project 2 -->
+                <div class="portfolio-item" data-category="graphics">
+                    <div class="portfolio-img">
+                        <img src="nike.jpg" alt="Web Design">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Graphic Design</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                        <h3>Marketing Campaign Design</h3>
+                        <p>Complete marketing collateral design for product launch campaign.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience & Education</h2>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - Present</div>
+                        <h3>Creative Director & Lead Developer</h3>
+                        <p>Digital Solutions Agency</p>
+                        <p>Lead multidisciplinary team delivering video editing, design, and web development projects for enterprise clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <h3>Senior Video Editor & Designer</h3>
+                        <p>Creative Studio Inc.</p>
+                        <p>Produced and edited commercial videos, social media content, and designed branding materials.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017 - 2019</div>
+                        <h3>Web Developer & UI/UX Designer</h3>
+                        <p>Tech Startup Co.</p>
+                        <p>Developed responsive web applications and designed user interfaces for mobile and web platforms.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2013 - 2017</div>
+                        <h3>Bachelor of Digital Media</h3>
+                        <p>University of Creative Arts</p>
+                        <p>Graduated with honors, specializing in digital video production, graphic design, and interactive media.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="mailto:hello@alexmorgan.design" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>bipinxetri26@gmail.com</p>
+                            <small>Response within 24 hours</small>
+                        </div>
+                    </a>
+                    
+                    <a href="+977 9846702728" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+977 9846702728</p>
+                            <small>Available 11AM - 6PM EST</small>
+                        </div>
+                    </a>
+                    
+                    <a href="https://wa.me/9846702728" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+977 9846702728</p>
+                            <small>Fast response via chat</small>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="video">Video Editing</option>
+                                <option value="graphics">Graphic Design</option>
+                                <option value="web">Web Development</option>
+                                <option value="ui">UI/UX Design</option>
+                                <option value="multiple">Multiple Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">BB</div>
+                        <div>Bipin <span>Basnet</span></div>
+                    </div>
+                    <p>Transforming ideas into compelling visual experiences through expert video editing, stunning graphic design, responsive web development, and intuitive UI/UX design.</p>
+                    <div class="social-links">
+                        <a href="https://web.whatsapp.com/" target="_blank" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/dashboard" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.facebook.com/bipin.chettri.nep" target="_blank" class="social-link dribbble">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-services">
+                    <h4>My Services</h4>
+                    <ul class="services-list">
+                        <li><i class="fas fa-video"></i> Video Editing & Production</li>
+                        <li><i class="fas fa-paint-brush"></i> Graphic Design & Branding</li>
+                        <li><i class="fas fa-code"></i> Web Development</li>
+                        <li><i class="fas fa-desktop"></i> UI/UX Design</li>
+                        <li><i class="fas fa-mobile-alt"></i> Responsive Web Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Alex Morgan. All Rights Reserved. | Crafted with <i class="fas fa-heart" style="color: #8b5cf6;"></i> for creative excellence</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="index.js"></script>
+</html>
