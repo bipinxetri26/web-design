@@ -3,442 +3,1641 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rose Day Surprise ❤️</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #ff4d6d;
+            --secondary-color: #ff8fa3;
+            --light-pink: #ffccd5;
+            --light-color: #fff0f3;
+            --dark-color: #590d22;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #ffc2d1 0%, #ffb3c6 25%, #ff8fa3 50%, #ff758f 75%, #ff4d6d 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Page 1 Styles */
+        .page-1 {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            position: relative;
+            padding: 50px 40px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+            border: 5px solid var(--light-pink);
+            backdrop-filter: blur(10px);
+        }
+
+        .page-2 {
+            display: none;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Page 1 Header */
+        .header {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.6rem;
+            color: var(--dark-color);
+            font-weight: 600;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Heartbeat Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        /* Message Box */
+        .message-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            border: 3px solid var(--light-pink);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .message-box:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ff4d6d, #ff8fa3, #ffccd5, #ff8fa3, #ff4d6d);
+            z-index: -1;
+            border-radius: 30px;
+            animation: shimmer 4s infinite linear;
+            background-size: 400% 400%;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .message-box h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+
+        .message-box p {
+            font-size: 1.5rem;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Rose Animation */
+        .rose-animation {
+            width: 220px;
+            height: 220px;
+            margin: 40px auto;
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        }
+
+        .rose-animation i {
+            font-size: 14rem;
+            color: var(--primary-color);
+            text-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            animation: rotateRose 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-25px) rotate(3deg); }
+            66% { transform: translateY(10px) rotate(-2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @keyframes rotateRose {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Surprise Section */
+        .surprise-section {
+            margin-top: 50px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 25px;
+            border: 3px dashed var(--secondary-color);
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .surprise-section:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ff4d6d' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .surprise-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .surprise-section h3 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: var(--dark-color);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .surprise-section p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            color: #666;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* Button Container - IMPROVED */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+            position: relative;
+            min-height: 180px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 22px 60px;
+            border: none;
+            border-radius: 60px;
+            font-size: 2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            font-family: 'Dancing Script', cursive;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+            min-width: 200px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .btn:hover:before {
+            transform: translateX(100%);
+        }
+
+        .yes-btn {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            border: 3px solid #2E7D32;
+        }
+
+        .yes-btn:hover {
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            background: linear-gradient(135deg, #66BB6A, #388E3C);
+        }
+
+        .yes-btn:active {
+            transform: translateY(-2px);
+        }
+
+        .no-btn {
+            background: linear-gradient(135deg, #f44336, #c62828);
+            color: white;
+            border: 3px solid #c62828;
+            position: absolute;
+            z-index: 20;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .no-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .no-btn.escaping {
+            transition: all 0.2s ease !important;
+        }
+
+        /* Counter Display */
+        .counter-display {
+            margin-top: 30px;
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            font-weight: 600;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--light-pink);
+        }
+
+        .counter-display span {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 800;
+            margin: 0 5px;
+        }
+
+        /* Instructions */
+        .instructions {
+            margin-top: 25px;
+            font-size: 1.2rem;
+            color: #777;
+            font-style: italic;
+            opacity: 0.8;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* PAGE 2 STYLES */
+        .page-2-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: slideDown 1s ease-out;
+        }
+
+        .page-2-header h1 {
+            font-size: 4.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        .page-2-header p {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Love Letter */
+        .love-letter {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--light-pink);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInLeft 1.2s ease-out;
+        }
+
+        .love-letter:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffccd5' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .love-letter-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .love-letter h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+            text-align: center;
+        }
+
+        .letter-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .signature {
+            text-align: right;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 30px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Rose Garden - FIXED */
+        .rose-garden {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--light-pink);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInRight 1.2s ease-out;
+        }
+
+        .rose-garden h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+            text-align: center;
+        }
+
+        /* FIXED Virtual Rose Container */
+        .virtual-rose-container {
+            width: 250px;
+            height: 320px;
+            position: relative;
+            margin: 0 auto 30px;
+        }
+
+        .virtual-rose {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 0 auto;
+            cursor: pointer;
+            animation: float2 5s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .rose-flower {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rose-flower i {
+            font-size: 10rem;
+            color: var(--primary-color);
+            text-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+        .rose-petals {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .rose-petal {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            transform-origin: bottom center;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+            opacity: 0.9;
+            transition: all 0.8s ease;
+        }
+
+        .rose-stem {
+            position: absolute;
+            width: 12px;
+            height: 150px;
+            background: linear-gradient(to bottom, #2d7d46, #3cb371);
+            top: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 6px;
+            z-index: 0;
+        }
+
+        .rose-leaf {
+            position: absolute;
+            width: 35px;
+            height: 20px;
+            background-color: #2d7d46;
+            border-radius: 50% 0 50% 0;
+            top: 220px;
+            z-index: 0;
+        }
+
+        .rose-leaf.left {
+            left: 70px;
+            transform: rotate(45deg);
+        }
+
+        .rose-leaf.right {
+            right: 70px;
+            transform: rotate(-45deg);
+        }
+
+        .rose-thorns {
+            position: absolute;
+            width: 8px;
+            height: 15px;
+            background-color: #2d7d46;
+            border-radius: 50%;
+            top: 200px;
+        }
+
+        .rose-thorns:nth-child(1) {
+            left: 45%;
+        }
+
+        .rose-thorns:nth-child(2) {
+            left: 55%;
+            top: 230px;
+        }
+
+        @keyframes float2 {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Rose Colors */
+        .rose-colors {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .rose-color {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid white;
+        }
+
+        .rose-color:hover {
+            transform: scale(1.2);
+        }
+
+        .rose-color.active {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 3px var(--dark-color);
+        }
+
+        .rose-color.red { background-color: #ff4d6d; }
+        .rose-color.pink { background-color: #ff8fa3; }
+        .rose-color.white { background-color: #fff; border: 3px solid #eee; }
+        .rose-color.yellow { background-color: #ffd166; }
+        .rose-color.purple { background-color: #c77dff; }
+        .rose-color.orange { background-color: #ff9e6d; }
+
+        /* Memory Section */
+        .memory-section {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--light-pink);
+            margin-bottom: 40px;
+            text-align: center;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .memory-section h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .memory-item {
+            background-color: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .memory-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--secondary-color);
+        }
+
+        .memory-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .memory-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .footer h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .footer p {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+        }
+
+        .final-message {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 204, 213, 0.3);
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.7;
+            animation: floatElement linear infinite;
+        }
+
+        @keyframes floatElement {
+            to {
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        /* Surprise Button */
+        .surprise-btn {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 1px;
+        }
+
+        .surprise-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .surprise-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .page-1 {
+                padding: 40px 30px;
+            }
+            
+            .header h1 {
+                font-size: 4rem;
+            }
+            
+            .message-box h2 {
+                font-size: 3rem;
+            }
+            
+            .btn {
+                padding: 20px 50px;
+                font-size: 1.8rem;
+                min-width: 180px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-1 {
+                padding: 30px 25px;
+            }
+            
+            .header h1 {
+                font-size: 3.2rem;
+            }
+            
+            .header p {
+                font-size: 1.3rem;
+            }
+            
+            .message-box h2 {
+                font-size: 2.5rem;
+            }
+            
+            .message-box p {
+                font-size: 1.3rem;
+            }
+            
+            .surprise-section h3 {
+                font-size: 2.5rem;
+            }
+            
+            .surprise-section p {
+                font-size: 1.2rem;
+            }
+            
+            .rose-animation i {
+                font-size: 10rem;
+            }
+            
+            .btn {
+                padding: 18px 40px;
+                font-size: 1.6rem;
+                min-width: 160px;
+            }
+            
+            .button-container {
+                gap: 20px;
+                min-height: 220px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .message-box {
+                padding: 25px;
+            }
+            
+            .rose-animation {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .rose-animation i {
+                font-size: 8rem;
+            }
+            
+            .btn {
+                padding: 15px 30px;
+                font-size: 1.4rem;
+                min-width: 140px;
+            }
+            
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                min-height: 280px;
+            }
+            
+            .no-btn {
+                position: relative;
+            }
+        }
+    </style>
 </head>
 <body>
-        <header id="header">
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <div class="logo-icon">BB</div>
-                    <div>Bipin <span>Basnet</span></div>
-                </a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Floating Elements -->
+    <div class="floating-elements" id="floatingElements"></div>
+    
+    <!-- PAGE 1 -->
+    <div class="page-1" id="page1">
+        <div class="header">
+            <h1>Happy Rose Day Sana🌹</h1>
+            <p>A Special Message Just For You, My Beautiful Love. You are the rose that makes my garden complete.</p>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>I'm Bipin Basnet</h1>
-                    <div class="profession-rotator">
-                        <ul class="profession-list">
-                            <li>Video Editor</li>
-                            <li>Graphics Designer</li>
-                            <li>Web Developer</li>
-                            <li>UI/UX Designer</li>
-                        </ul>
+        
+        <div class="message-box">
+            <h2>My Dearest,</h2>
+            <p>On this beautiful Rose Day, I want you to know how special you are to me. Every moment with you feels like a blooming rose, beautiful, fragrant, and precious.</p>
+            <p>You are the rose in the garden of my life, and I'm so grateful for your love and presence.</p>
+        </div>
+        
+        <div class="rose-animation">
+            <i class="fas fa-spa"></i>
+        </div>
+        
+        <div class="surprise-section">
+            <div class="surprise-content">
+                <h3>I Have a Special Surprise for You! ❤️</h3>
+                <p>Will you accept my Rose Day surprise? It's something special just for you, my love.</p>
+                
+                <div class="button-container" id="buttonContainer">
+                    <button class="btn yes-btn" id="yesBtn">Yes! 🌹</button>
+                    <button class="btn no-btn" id="noBtn">No</button>
+                </div>
+                
+                <div class="counter-display" id="counterDisplay">
+                    No attempts: <span id="counter">0</span>/7
+                </div>
+                
+                <div class="instructions" id="instructions">
+                    Try clicking the "No" button... if you can catch it! 😉
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PAGE 2 (Hidden Initially) -->
+    <div class="page-2" id="page2">
+        <!-- Header -->
+        <div class="page-2-header">
+            <h1>You Said Yes! ❤️🌹</h1>
+            <p>Here's Your Special Rose Day Surprise, My Love</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Love Letter -->
+            <div class="love-letter">
+                <div class="love-letter-content">
+                    <h2>My Dearest Love,</h2>
+                    <div class="letter-text">
+                        <p>From the moment you said "Yes", my heart has been dancing with joy. Every day with you feels like Rose Day - filled with beauty, fragrance, and love.</p>
+                        
+                        <p>You are the most beautiful rose in my garden of life. Your smile brightens my darkest days, and your love gives me strength to face any challenge.</p>
+                        
+                        <p>On this special day, I want to promise you that I will always cherish you, protect you, and love you more with each passing moment. You are my forever, my always, my everything.</p>
+                        
+                        <p>Just like a rose needs sunshine and rain to bloom, our love grows stronger through every season of life. Thank you for being my sunshine and my rain.</p>
                     </div>
-                    <p>Creating stunning visual experiences through expert video editing, graphic design, web development, and intuitive user interfaces. Transforming ideas into reality with passion and precision.</p>
-                    <div class="cta-buttons">
-                        <a href="#portfolio" class="btn">
-                            <i class="fas fa-play-circle"></i> View My Work
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane"></i> Hire Me
-                        </a>
+                    
+                    <div class="signature">
+                        Forever Yours,<br>
+                        Your Loving Partner ❤️
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-container">
-                        <div class="profile-frame"></div>
-                        <img src="profile-pic.png" class="profile-image">
+            </div>
+            
+            <!-- FIXED Interactive Rose -->
+            <div class="rose-garden">
+                <h2>Your Virtual Rose</h2>
+                
+                <div class="virtual-rose-container">
+                    <div class="virtual-rose" id="virtualRose">
+                        <div class="rose-petals" id="rosePetals"></div>
+                        <div class="rose-flower">
+                            <i class="fas fa-spa" id="roseIcon"></i>
+                        </div>
+                        <div class="rose-stem"></div>
+                        <div class="rose-leaf left"></div>
+                        <div class="rose-leaf right"></div>
+                        <div class="rose-thorns"></div>
+                        <div class="rose-thorns"></div>
                     </div>
+                </div>
+                
+                <p style="margin-bottom: 20px; font-size: 1.2rem;">Click the rose to see it bloom and change colors!</p>
+                
+                <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Choose Rose Color:</h3>
+                <div class="rose-colors">
+                    <div class="rose-color red active" data-color="#ff4d6d"></div>
+                    <div class="rose-color pink" data-color="#ff8fa3"></div>
+                    <div class="rose-color white" data-color="#ffffff"></div>
+                    <div class="rose-color yellow" data-color="#ffd166"></div>
+                    <div class="rose-color purple" data-color="#c77dff"></div>
+                    <div class="rose-color orange" data-color="#ff9e6d"></div>
                 </div>
             </div>
         </div>
         
-        <!-- Floating Elements -->
-        <div class="floating-element floating-1">
-            <div class="skill-icon">
-                <i class="fas fa-video"></i>
-            </div>
-            <p>Video Editing</p>
-        </div>
-        <div class="floating-element floating-2">
-            <div class="skill-icon">
-                <i class="fas fa-paint-brush"></i>
-            </div>
-            <p>Graphics Design</p>
-        </div>
-        <div class="floating-element floating-3">
-            <div class="skill-icon">
-                <i class="fas fa-code"></i>
-            </div>
-            <p>Web Development</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Creative Professional & Digital Expert</h3>
-                    <p>With over 1 years of experience in the digital creative industry, I specialize in bringing ideas to life across multiple disciplines. My unique blend of skills in video editing, graphic design, web development, and UI/UX design allows me to deliver comprehensive digital solutions.</p>
-                    <p>I approach every project with a holistic perspective, understanding that great digital experiences require both technical excellence and artistic vision. From concept to completion, I ensure every detail aligns with the project's goals and exceeds expectations.</p>
-                    <p>My passion lies in creating work that not only looks exceptional but also performs flawlessly and delivers real results for clients across various industries.</p>
-                    <a href="#contact" class="btn">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-                <div class="skills-container">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-film"></i>
-                        </div>
-                        <h4>Video Editing</h4>
-                        <p>Expert in Premiere Pro, After Effects, and DaVinci Resolve. Specializing in corporate videos, commercials, and social media content.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h4>Graphics Design</h4>
-                        <p>Mastery of Adobe Creative Suite for branding, print design, digital graphics, and visual identity systems.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h4>Web Development</h4>
-                        <p>Full-stack development with modern technologies: React, Node.js, Python, and responsive front-end frameworks.</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <h4>UI/UX Design</h4>
-                        <p>Designing intuitive user interfaces and engaging user experiences for web and mobile applications with user-centric approach.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Portfolio</h2>
-            </div>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="video">Video Editing</button>
-                <button class="filter-btn" data-filter="graphics">Graphic Design</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
-            </div>
-            <div class="portfolio-grid">
-                <!-- Video Editing Projects -->
-                <div class="portfolio-item" data-category="video">
-                    <div class="portfolio-img">
-                        <video muted loop poster="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                            <source src="lv_0_20251216143747.mp4" type="video/mp4">
-                        </video>
-                        <div class="play-btn">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-tags">
-                            <span class="tag">Video Editing</span>
-                            <span class="tag">Corporate</span>
-                        </div>
-                        <h3>Tech Conference Highlights</h3>
-                        <p>Multi-camera editing for major tech conference, including color grading and audio mastering.</p>
-                    </div>
-                </div>
-
-                <!-- Graphic Design Projects -->
-                <div class="portfolio-item" data-category="graphics">
-                    <div class="portfolio-img">
-                        <img src="berger.jpg" alt="Brand Identity Design">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-tags">
-                            <span class="tag">Graphic Design</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                        <h3>Food</h3>
-                        <p>Attractive food image for hotel and resturent advertisement </p>
-                    </div>
-                </div>
-                <!-- Graphic Design Projects -->
-                <div class="portfolio-item" data-category="graphics">
-                    <div class="portfolio-img">
-                        <img src="farming.jpg" alt="Brand Identity Design">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-tags">
-                            <span class="tag">Graphic Design</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                        <h3>Farming</h3>
-                        <p>Attractive image for Farming advertisement </p>
-                    </div>
-                </div>
-                <!-- Graphic Design Projects -->
-                <div class="portfolio-item" data-category="graphics">
-                    <div class="portfolio-img">
-                        <img src="drink.jpg" alt="Brand Identity Design">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-tags">
-                            <span class="tag">Graphic Design</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                        <h3>Drink</h3>
-                        <p>Attractive image drink advertisement </p>
-                    </div>
-                </div>
-         
-                <!-- Web Development Projects -->
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Website">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-tags">
-                            <span class="tag">Web Development</span>
-                            <span class="tag">E-commerce</span>
-                        </div>
-                        <h3>E-commerce Platform</h3>
-                        <p>Full-stack e-commerce solution with payment integration and admin dashboard.</p>
-                    </div>
-                </div>
-
-                <!-- UI/UX Design Projects -->
-                <div class="portfolio-item" data-category="ui">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile App Design">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-tags">
-                            <span class="tag">UI/UX Design</span>
-                            <span class="tag">Mobile App</span>
-                        </div>
-                        <h3>Fitness App UI/UX</h3>
-                        <p>Complete user experience design for fitness tracking mobile application.</p>
-                    </div>
-                </div>
-
-                <!-- Video Editing Project 2 -->
-                <div class="portfolio-item" data-category="video">
-                    <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Documentary Film">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-tags">
-                            <span class="tag">Video Editing</span>
-                            <span class="tag">Documentary</span>
-                        </div>
-                        <h3>Environmental Documentary</h3>
-                        <p>Feature-length documentary editing with archival footage integration and narrative structuring.</p>
-                    </div>
-                </div>
-
-                <!-- Graphic Design Project 2 -->
-                <div class="portfolio-item" data-category="graphics">
-                    <div class="portfolio-img">
-                        <img src="nike.jpg" alt="Web Design">
-                    </div>
-                    <div class="portfolio-info">
-                        <div class="portfolio-tags">
-                            <span class="tag">Graphic Design</span>
-                            <span class="tag">UI/UX</span>
-                        </div>
-                        <h3>Marketing Campaign Design</h3>
-                        <p>Complete marketing collateral design for product launch campaign.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-title">
-                <h2>Experience & Education</h2>
-            </div>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021 - Present</div>
-                        <h3>Creative Director & Lead Developer</h3>
-                        <p>Digital Solutions Agency</p>
-                        <p>Lead multidisciplinary team delivering video editing, design, and web development projects for enterprise clients.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2019 - 2021</div>
-                        <h3>Senior Video Editor & Designer</h3>
-                        <p>Creative Studio Inc.</p>
-                        <p>Produced and edited commercial videos, social media content, and designed branding materials.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2017 - 2019</div>
-                        <h3>Web Developer & UI/UX Designer</h3>
-                        <p>Tech Startup Co.</p>
-                        <p>Developed responsive web applications and designed user interfaces for mobile and web platforms.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2013 - 2017</div>
-                        <h3>Bachelor of Digital Media</h3>
-                        <p>University of Creative Arts</p>
-                        <p>Graduated with honors, specializing in digital video production, graphic design, and interactive media.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="mailto:hello@alexmorgan.design" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>bipinxetri26@gmail.com</p>
-                            <small>Response within 24 hours</small>
-                        </div>
-                    </a>
-                    
-                    <a href="+977 9846702728" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+977 9846702728</p>
-                            <small>Available 11AM - 6PM EST</small>
-                        </div>
-                    </a>
-                    
-                    <a href="https://wa.me/9846702728" target="_blank" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <h4>WhatsApp</h4>
-                            <p>+977 9846702728</p>
-                            <small>Fast response via chat</small>
-                        </div>
-                    </a>
+        <!-- Memory Section -->
+        <div class="memory-section">
+            <h2>What Makes You Special 🌟</h2>
+            <p>These are just a few of the countless reasons why I love you</p>
+            
+            <div class="memory-grid">
+                <div class="memory-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Your Heart</h3>
+                    <p>The most kind and loving heart I've ever known</p>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" required>
-                                <option value="" disabled selected>Select Service</option>
-                                <option value="video">Video Editing</option>
-                                <option value="graphics">Graphic Design</option>
-                                <option value="web">Web Development</option>
-                                <option value="ui">UI/UX Design</option>
-                                <option value="multiple">Multiple Services</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Tell me about your project..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
+                <div class="memory-item">
+                    <i class="fas fa-laugh-beam"></i>
+                    <h3>Your Smile</h3>
+                    <p>Brightens my world like sunshine after rain</p>
+                </div>
+                
+                <div class="memory-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Your Care</h3>
+                    <p>Always there to support and cherish me</p>
+                </div>
+                
+                <div class="memory-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Your Spirit</h3>
+                    <p>So strong, beautiful, and inspiring</p>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <h3>Happy Rose Day, My Love! 🌹</h3>
+            <p>May our love continue to bloom like the most beautiful rose, forever and always.</p>
+            
+            <div class="final-message">
+                No matter how many roses bloom in this world,<br>
+                none will ever be as beautiful as you.<br>
+                I love you more than words can express. ❤️
+            </div>
+            
+            <button class="surprise-btn" id="finalSurpriseBtn">
+                <i class="fas fa-gift"></i> One More Surprise!
+            </button>
+        </div>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <div class="logo-icon">BB</div>
-                        <div>Bipin <span>Basnet</span></div>
-                    </div>
-                    <p>Transforming ideas into compelling visual experiences through expert video editing, stunning graphic design, responsive web development, and intuitive UI/UX design.</p>
-                    <div class="social-links">
-                        <a href="https://web.whatsapp.com/" target="_blank" class="social-link whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="social-link instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="social-link linkedin">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/dashboard" target="_blank" class="social-link github">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.facebook.com/bipin.chettri.nep" target="_blank" class="social-link dribbble">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-services">
-                    <h4>My Services</h4>
-                    <ul class="services-list">
-                        <li><i class="fas fa-video"></i> Video Editing & Production</li>
-                        <li><i class="fas fa-paint-brush"></i> Graphic Design & Branding</li>
-                        <li><i class="fas fa-code"></i> Web Development</li>
-                        <li><i class="fas fa-desktop"></i> UI/UX Design</li>
-                        <li><i class="fas fa-mobile-alt"></i> Responsive Web Design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Alex Morgan. All Rights Reserved. | Crafted with <i class="fas fa-heart" style="color: #8b5cf6;"></i> for creative excellence</p>
-            </div>
-        </div>
-    </footer>
+    <script>
+        // Create floating elements
+        const floatingElements = document.getElementById('floatingElements');
+        const floatingIcons = ['🌹', '❤️', '🥀', '🌺', '🌸', '💮', '🏵️', '💕', '💖', '💗'];
+        
+        for (let i = 0; i < 35; i++) {
+            const element = document.createElement('div');
+            element.classList.add('floating-element');
+            element.innerHTML = floatingIcons[Math.floor(Math.random() * floatingIcons.length)];
+            
+            // Random position
+            element.style.left = `${Math.random() * 100}%`;
+            element.style.bottom = `${Math.random() * 20}%`;
+            
+            // Random size
+            const size = Math.random() * 45 + 25;
+            element.style.fontSize = `${size}px`;
+            
+            // Random animation
+            const duration = Math.random() * 20 + 20;
+            const delay = Math.random() * 8;
+            element.style.animationDuration = `${duration}s`;
+            element.style.animationDelay = `${delay}s`;
+            element.style.opacity = `${Math.random() * 0.6 + 0.3}`;
+            
+            floatingElements.appendChild(element);
+        }
+        
+        // ============= PAGE 1 LOGIC =============
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const buttonContainer = document.getElementById('buttonContainer');
+        const counterDisplay = document.getElementById('counter');
+        const instructions = document.getElementById('instructions');
+        const page1 = document.getElementById('page1');
+        const page2 = document.getElementById('page2');
+        
+        let clickCount = 0;
+        const maxClicks = 7;
+        let isEscaping = false;
+        
+        // Function to create confetti
+        function createConfetti(count, color = '#ff4d6d') {
+            for (let i = 0; i < count; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.backgroundColor = color;
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.top = `${Math.random() * 30}%`;
+                confetti.style.opacity = '1';
+                
+                // Random size and shape
+                const size = Math.random() * 15 + 8;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                
+                // Random shape
+                if (Math.random() > 0.5) {
+                    confetti.style.borderRadius = '50%';
+                } else {
+                    confetti.style.borderRadius = '2px';
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                }
+                
+                document.body.appendChild(confetti);
+                
+                // Animate confetti
+                const animationDuration = Math.random() * 2 + 1;
+                confetti.style.transition = `all ${animationDuration}s ease-out`;
+                
+                setTimeout(() => {
+                    confetti.style.top = `${Math.random() * 50 + 50}%`;
+                    confetti.style.left = `${Math.random() * 100}%`;
+                    confetti.style.opacity = '0';
+                    confetti.style.transform = `scale(0.5) rotate(${Math.random() * 720}deg)`;
+                }, 10);
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    document.body.removeChild(confetti);
+                }, animationDuration * 1000 + 100);
+            }
+        }
+        
+        // Function to create floating hearts
+        function createHearts(count, color = '#ff4d6d') {
+            for (let i = 0; i < count; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.style.position = 'fixed';
+                heart.style.fontSize = `${Math.random() * 35 + 20}px`;
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.top = '100%';
+                heart.style.opacity = '0.9';
+                heart.style.zIndex = '9999';
+                heart.style.pointerEvents = 'none';
+                heart.style.transition = 'all 1.8s ease-out';
+                heart.style.filter = 'drop-shadow(0 5px 10px rgba(0,0,0,0.2))';
+                if (color) heart.style.color = color;
+                
+                document.body.appendChild(heart);
+                
+                // Animate heart floating up
+                setTimeout(() => {
+                    heart.style.top = `${Math.random() * 50}%`;
+                    heart.style.left = `${Math.random() * 100}%`;
+                    heart.style.opacity = '0';
+                    heart.style.transform = 'scale(0.5) rotate(180deg)';
+                }, 10);
+                
+                // Remove heart after animation
+                setTimeout(() => {
+                    document.body.removeChild(heart);
+                }, 1900);
+            }
+        }
+        
+        // Function to move No button in an intelligent way
+        function moveNoButton() {
+            if (isEscaping) return;
+            
+            clickCount++;
+            counterDisplay.textContent = clickCount;
+            
+            // Update instructions
+            if (clickCount === 1) {
+                instructions.textContent = "It's trying to escape! Keep trying! 😄";
+            } else if (clickCount === 3) {
+                instructions.textContent = "Getting harder to catch, isn't it? 😏";
+            } else if (clickCount === 5) {
+                instructions.textContent = "Almost there! Just a couple more tries! 🤭";
+            }
+            
+            if (clickCount >= maxClicks) {
+                // After max clicks, remove the No button with style
+                isEscaping = true;
+                instructions.textContent = "You did it! Now there's only one choice left! 💖";
+                
+                // Create celebration effects
+                createConfetti(50, '#ff4d6d');
+                createHearts(25);
+                playCelebrationSound();
+                
+                // Animate No button disappearing
+                noBtn.style.transition = 'all 0.8s ease';
+                noBtn.style.transform = 'scale(0) rotate(720deg)';
+                noBtn.style.opacity = '0';
+                
+                setTimeout(() => {
+                    noBtn.style.display = 'none';
+                    
+                    // Make Yes button bigger and center it
+                    yesBtn.style.position = 'relative';
+                    yesBtn.style.left = '0';
+                    yesBtn.style.transform = 'scale(1.3)';
+                    yesBtn.style.background = 'linear-gradient(135deg, #ff4d6d, #ff8fa3)';
+                    yesBtn.style.borderColor = '#ff4d6d';
+                    yesBtn.innerHTML = 'Yes! I Love You! 🌹❤️';
+                    yesBtn.style.animation = 'pulse 1.5s infinite';
+                    
+                    // Update counter display
+                    document.getElementById('counterDisplay').innerHTML = 
+                        '<span style="color:#4CAF50; font-size:1.8rem;">✓ Success!</span> You caught the No button!';
+                }, 800);
+                
+                return;
+            }
+            
+            isEscaping = true;
+            noBtn.classList.add('escaping');
+            
+            // Get container dimensions
+            const containerWidth = buttonContainer.clientWidth;
+            const containerHeight = buttonContainer.clientHeight;
+            const buttonWidth = noBtn.clientWidth;
+            const buttonHeight = noBtn.clientHeight;
+            
+            // Calculate available space
+            const maxX = containerWidth - buttonWidth - 20;
+            const maxY = containerHeight - buttonHeight - 20;
+            
+            // Generate random position, but avoid current position
+            let randomX, randomY;
+            let attempts = 0;
+            const currentX = parseInt(noBtn.style.left) || 0;
+            const currentY = parseInt(noBtn.style.top) || 0;
+            
+            do {
+                randomX = Math.random() * maxX;
+                randomY = Math.random() * maxY;
+                attempts++;
+                
+                // Ensure it moves a minimum distance
+                const distance = Math.sqrt(Math.pow(randomX - currentX, 2) + Math.pow(randomY - currentY, 2));
+                if (distance > 50 || attempts > 20) break;
+            } while (true);
+            
+            // Apply new position with bounce effect
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+            
+            // Add rotation and scale effects
+            const rotation = (Math.random() * 60 - 30);
+            const scale = 1 - (clickCount * 0.05);
+            noBtn.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+            
+            // Create effects
+            createConfetti(3, '#f44336');
+            
+            // Change button text with fun messages
+            const noTexts = [
+                "Nope!",
+                "Try again!",
+                "Missed me!",
+                "Not so fast!",
+                "Catch me if you can!",
+                "Too slow!",
+                "Almost had it!",
+                "You'll never catch me!",
+                "Oops! Try again!",
+                "I'm too quick!",
+                "Nice try!",
+                "Better luck next time!",
+                "Too late!"
+            ];
+            noBtn.textContent = noTexts[Math.floor(Math.random() * noTexts.length)];
+            
+            // Change button color slightly
+            const hue = 0 + (clickCount * 5); // Red to orange shift
+            noBtn.style.background = `linear-gradient(135deg, hsl(${hue}, 100%, 65%), hsl(${hue}, 100%, 45%))`;
+            
+            // Reset escape flag after animation
+            setTimeout(() => {
+                isEscaping = false;
+                noBtn.classList.remove('escaping');
+            }, 300);
+        }
+        
+        // Play celebration sound
+        function playCelebrationSound() {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                
+                // Celebration melody
+                const notes = [659.25, 783.99, 1046.50, 880.00, 1174.66, 1318.51];
+                
+                notes.forEach((freq, index) => {
+                    setTimeout(() => {
+                        const oscillator = audioContext.createOscillator();
+                        const gainNode = audioContext.createGain();
+                        
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
+                        
+                        oscillator.frequency.value = freq;
+                        oscillator.type = 'triangle';
+                        
+                        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+                        
+                        oscillator.start(audioContext.currentTime);
+                        oscillator.stop(audioContext.currentTime + 0.4);
+                    }, index * 150);
+                });
+            } catch (e) {
+                console.log("Audio could not be played");
+            }
+        }
+        
+        // No button event listeners
+        noBtn.addEventListener('click', moveNoButton);
+        
+        // Make button escape on hover too (but not as aggressively)
+        noBtn.addEventListener('mouseover', function() {
+            if (isEscaping || clickCount >= maxClicks) return;
+            
+            // 50% chance to move on hover
+            if (Math.random() > 0.5 && clickCount < maxClicks - 1) {
+                // Small movement on hover
+                const currentX = parseInt(noBtn.style.left) || 0;
+                const currentY = parseInt(noBtn.style.top) || 0;
+                
+                const moveX = (Math.random() * 40 - 20);
+                const moveY = (Math.random() * 40 - 20);
+                
+                const containerWidth = buttonContainer.clientWidth;
+                const containerHeight = buttonContainer.clientHeight;
+                const buttonWidth = noBtn.clientWidth;
+                const buttonHeight = noBtn.clientHeight;
+                
+                let newX = currentX + moveX;
+                let newY = currentY + moveY;
+                
+                // Keep within bounds
+                newX = Math.max(0, Math.min(newX, containerWidth - buttonWidth - 20));
+                newY = Math.max(0, Math.min(newY, containerHeight - buttonHeight - 20));
+                
+                noBtn.style.transition = 'all 0.3s ease';
+                noBtn.style.left = `${newX}px`;
+                noBtn.style.top = `${newY}px`;
+            }
+        });
+        
+        // Yes button event listener - shows Page 2 directly
+        yesBtn.addEventListener('click', function() {
+            // Create celebration effects
+            createConfetti(100, '#4CAF50');
+            createHearts(40);
+            playCelebrationSound();
+            
+            // Show loading message
+            const originalText = this.innerHTML;
+            this.innerHTML = 'Loading Your Surprise... <i class="fas fa-heart fa-beat"></i>';
+            this.style.background = 'linear-gradient(135deg, #FF4D6D, #FF8FA3)';
+            this.style.borderColor = '#FF4D6D';
+            this.disabled = true;
+            
+            // Create a beautiful transition
+            page1.style.animation = 'fadeIn 0.8s ease reverse forwards';
+            
+            // Show Page 2 after a short delay
+            setTimeout(() => {
+                page1.style.display = 'none';
+                page2.style.display = 'block';
+                
+                // Initialize Page 2 elements
+                initPage2();
+                
+                // Animate Page 2 in
+                page2.style.animation = 'fadeIn 1s ease-out';
+            }, 1000);
+        });
+        
+        // ============= PAGE 2 LOGIC =============
+        function initPage2() {
+            // Create rose petals for Page 2
+            const rosePetals = document.getElementById('rosePetals');
+            const petalCount = 16;
+            let currentPetals = [];
+            let currentColor = '#ff4d6d';
+            
+            function createPetals(color = '#ff4d6d') {
+                // Clear existing petals
+                rosePetals.innerHTML = '';
+                currentPetals = [];
+                
+                for (let i = 0; i < petalCount; i++) {
+                    const petal = document.createElement('div');
+                    petal.classList.add('rose-petal');
+                    
+                    // Position petals in a circle
+                    const angle = (i * 360) / petalCount;
+                    const radius = 70;
+                    const x = radius * Math.cos(angle * Math.PI / 180);
+                    const y = radius * Math.sin(angle * Math.PI / 180);
+                    
+                    petal.style.top = `calc(50% + ${y}px - 30px)`;
+                    petal.style.left = `calc(50% + ${x}px - 20px)`;
+                    
+                    // Set color
+                    petal.style.background = `linear-gradient(to bottom, ${color}, ${adjustColor(color, 30)})`;
+                    
+                    // Rotate petals
+                    petal.style.transform = `rotate(${angle}deg)`;
+                    
+                    // Layer petals (earlier petals on top)
+                    petal.style.zIndex = petalCount - i;
+                    
+                    rosePetals.appendChild(petal);
+                    currentPetals.push(petal);
+                }
+            }
+            
+            // Helper function to adjust color brightness
+            function adjustColor(color, percent) {
+                const num = parseInt(color.replace("#", ""), 16);
+                const amt = Math.round(2.55 * percent);
+                const R = (num >> 16) + amt;
+                const G = (num >> 8 & 0x00FF) + amt;
+                const B = (num & 0x0000FF) + amt;
+                
+                return "#" + (
+                    0x1000000 +
+                    (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
+                    (G < 255 ? (G < 1 ? 0 : G) : 255) * 0x100 +
+                    (B < 255 ? (B < 1 ? 0 : B) : 255)
+                ).toString(16).slice(1);
+            }
+            
+            // Initialize petals with default color
+            createPetals('#ff4d6d');
+            
+            // Interactive Rose for Page 2
+            const virtualRose = document.getElementById('virtualRose');
+            const roseIcon = document.getElementById('roseIcon');
+            let isBloomed = false;
+            
+            virtualRose.addEventListener('click', function() {
+                if (!isBloomed) {
+                    // Bloom the rose - expand petals
+                    currentPetals.forEach((petal, index) => {
+                        const angle = (index * 360) / petalCount;
+                        const radius = 100; // Expanded radius
+                        const x = radius * Math.cos(angle * Math.PI / 180);
+                        const y = radius * Math.sin(angle * Math.PI / 180);
+                        
+                        petal.style.transition = 'all 0.8s ease';
+                        petal.style.top = `calc(50% + ${y}px - 30px)`;
+                        petal.style.left = `calc(50% + ${x}px - 20px)`;
+                        petal.style.opacity = '1';
+                    });
+                    
+                    // Make rose icon bigger
+                    roseIcon.style.transform = 'scale(1.3) rotate(15deg)';
+                    roseIcon.style.transition = 'all 0.8s ease';
+                    
+                    isBloomed = true;
+                    
+                    // Create floating hearts
+                    createHearts(10, currentColor);
+                    
+                    // Play bloom sound
+                    playBloomSound();
+                    
+                    // Revert after 3 seconds
+                    setTimeout(() => {
+                        closeRose();
+                    }, 3000);
+                } else {
+                    closeRose();
+                }
+            });
+            
+            function closeRose() {
+                // Close the rose
+                currentPetals.forEach((petal, index) => {
+                    const angle = (index * 360) / petalCount;
+                    const radius = 70; // Original radius
+                    const x = radius * Math.cos(angle * Math.PI / 180);
+                    const y = radius * Math.sin(angle * Math.PI / 180);
+                    
+                    petal.style.transition = 'all 0.8s ease';
+                    petal.style.top = `calc(50% + ${y}px - 30px)`;
+                    petal.style.left = `calc(50% + ${x}px - 20px)`;
+                });
+                
+                // Reset rose icon
+                roseIcon.style.transform = 'scale(1) rotate(0deg)';
+                
+                isBloomed = false;
+            }
+            
+            // Rose color changer for Page 2
+            const colorButtons = document.querySelectorAll('.rose-color');
+            colorButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    colorButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get color
+                    const color = this.getAttribute('data-color');
+                    currentColor = color;
+                    
+                    // Change rose icon color
+                    roseIcon.style.color = color;
+                    
+                    // Recreate petals with new color
+                    createPetals(color);
+                    
+                    // Create floating petals
+                    createFloatingPetals(5, color);
+                });
+            });
+            
+            // Create floating petals for Page 2
+            function createFloatingPetals(count, color = '#ff4d6d') {
+                for (let i = 0; i < count; i++) {
+                    const petal = document.createElement('div');
+                    petal.innerHTML = '🌸';
+                    petal.style.position = 'fixed';
+                    petal.style.fontSize = `${Math.random() * 25 + 15}px`;
+                    petal.style.left = `${Math.random() * 100}%`;
+                    petal.style.top = '100%';
+                    petal.style.opacity = '0.9';
+                    petal.style.zIndex = '9999';
+                    petal.style.pointerEvents = 'none';
+                    petal.style.transition = 'all 2s ease-out';
+                    petal.style.color = color;
+                    
+                    document.body.appendChild(petal);
+                    
+                    // Animate petal floating up
+                    setTimeout(() => {
+                        petal.style.top = `${Math.random() * 50}%`;
+                        petal.style.left = `${Math.random() * 100}%`;
+                        petal.style.opacity = '0';
+                        petal.style.transform = 'scale(0.5) rotate(360deg)';
+                    }, 10);
+                    
+                    // Remove petal after animation
+                    setTimeout(() => {
+                        document.body.removeChild(petal);
+                    }, 2100);
+                }
+            }
+            
+            // Play bloom sound for Page 2
+            function playBloomSound() {
+                try {
+                    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    
+                    // Gentle bloom sound
+                    for (let i = 0; i < 3; i++) {
+                        setTimeout(() => {
+                            const oscillator = audioContext.createOscillator();
+                            const gainNode = audioContext.createGain();
+                            
+                            oscillator.connect(gainNode);
+                            gainNode.connect(audioContext.destination);
+                            
+                            oscillator.frequency.value = 600 + (i * 100);
+                            oscillator.type = 'sine';
+                            
+                            gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+                            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                            
+                            oscillator.start(audioContext.currentTime);
+                            oscillator.stop(audioContext.currentTime + 0.3);
+                        }, i * 100);
+                    }
+                } catch (e) {
+                    console.log("Audio could not be played");
+                }
+            }
+            
+            // Final surprise button for Page 2
+            const finalSurpriseBtn = document.getElementById('finalSurpriseBtn');
+            finalSurpriseBtn.addEventListener('click', function() {
+                // Create lots of hearts and petals
+                createHearts(25, currentColor);
+                createFloatingPetals(15, currentColor);
+                
+                // Play romantic melody
+                playRomanticMelody();
+                
+                // Change button text
+                this.innerHTML = 'I Love You! ❤️🌹';
+                this.style.background = 'linear-gradient(to right, #ff0066, #ff3399)';
+                this.style.transform = 'scale(1.1)';
+                
+                // Bloom the rose
+                if (!isBloomed) {
+                    virtualRose.click();
+                }
+                
+                // Show message
+                setTimeout(() => {
+                    alert("Thank you for being the most amazing person in my life! 💖\n\nYou are my forever Rose Day surprise! 🌹");
+                }, 1000);
+            });
+            
+            // Play romantic melody for Page 2
+            function playRomanticMelody() {
+                try {
+                    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    
+                    // Romantic melody
+                    const notes = [523.25, 659.25, 783.99, 880.00, 987.77, 1046.50, 1174.66];
+                    
+                    notes.forEach((freq, index) => {
+                        setTimeout(() => {
+                            const oscillator = audioContext.createOscillator();
+                            const gainNode = audioContext.createGain();
+                            
+                            oscillator.connect(gainNode);
+                            gainNode.connect(audioContext.destination);
+                            
+                            oscillator.frequency.value = freq;
+                            oscillator.type = 'triangle';
+                            
+                            gainNode.gain.setValueAtTime(0.25, audioContext.currentTime);
+                            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                            
+                            oscillator.start(audioContext.currentTime);
+                            oscillator.stop(audioContext.currentTime + 0.5);
+                        }, index * 200);
+                    });
+                } catch (e) {
+                    console.log("Audio could not be played");
+                }
+            }
+        }
+        
+        // ============= INITIAL SETUP =============
+        window.addEventListener('load', function() {
+            // Page 1 initial animation
+            page1.style.animation = 'fadeIn 1.5s ease-out';
+            createHearts(8);
+            
+            // Position No button randomly at start
+            const containerWidth = buttonContainer.clientWidth;
+            const containerHeight = buttonContainer.clientHeight;
+            const buttonWidth = noBtn.clientWidth;
+            const buttonHeight = noBtn.clientHeight;
+            
+            const maxX = containerWidth - buttonWidth - 20;
+            const maxY = containerHeight - buttonHeight - 20;
+            
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+            
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        });
+    </script>
 </body>
-<script src="index.js"></script>
 </html>
