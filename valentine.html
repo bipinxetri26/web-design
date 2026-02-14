@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sanu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* ---------- Netflix Intro ---------- */
+#intro{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+    padding: 0 10px; /* ensure text doesn’t overflow on small screens */
+}
+
+.netflix-text{
+    font-size:8vw; /* responsive font size */
+    font-weight:bold;
+    color:#e50914;
+    letter-spacing:1vw; /* responsive letter spacing */
+    text-align:center;
+    animation:zoom 4s ease-in-out forwards;
+}
+
+/* Adjust zoom animation for smaller screens */
+@keyframes zoom{
+    0%{
+        transform:scale(0);
+    }
+    100%{
+        transform:scale(5);
+        opacity:0;
+    }
+}
+
+/* Responsive adjustments for very small devices */
+@media(max-width:600px){
+    .netflix-text{
+        font-size:12vw;
+        letter-spacing:0.5vw;
+    }
+}
+/* ---------- Lock Screen ---------- */
+#lockScreen{
+    display:none;
+    height:100vh;
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.lock-box{
+    background:rgba(0,0,0,0.75);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:90%;
+    max-width:400px;
+    color:white;
+}
+
+.lock-box input{
+    width:100%;
+    padding:12px;
+    margin:15px 0;
+    border:none;
+    border-radius:10px;
+}
+
+.lock-box button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#e50914;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* ---------- Question Page ---------- */
+#questionPage{
+    display:none;
+    height:100vh;
+    background:linear-gradient(to right,#ff758c,#ff7eb3);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+#questionPage h1{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+#questionPage h2{
+    font-size:28px;
+    margin-bottom:40px;
+}
+
+.button-container{
+    position:relative;
+    width:300px;
+    height:100px;
+}
+
+.btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    position:absolute;
+}
+
+#yesBtn{
+    left:20px;
+    background:#ff416c;
+    color:white;
+}
+
+#noBtn{
+    right:20px;
+    background:#333;
+    color:white;
+}
+
+/* ---------- Second Page ---------- */
+#secondPage{
+    display:none;
+    height:100vh;
+    background:linear-gradient(135deg,#ff6a00,#ee0979);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+#secondPage h1{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+#countdown{
+    font-size:22px;
+    margin-top:20px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    .netflix-text{font-size:35px;}
+    #questionPage h1{font-size:24px;}
+    #questionPage h2{font-size:22px;}
+    #secondPage h1{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Netflix Intro -->
+<div id="intro">
+    <div class="netflix-text">Happy Valentine day Sanu ❤️</div>
+</div>
+
+<!-- Lock Screen -->
+<div id="lockScreen">
+    <div class="lock-box">
+        <h2>Enter Password 💖</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="unlock()">Unlock</button>
+        <p id="error" style="color:yellow;"></p>
+    </div>
+</div>
+
+
+<!-- Question Page -->
+<div id="questionPage">
+  <p id="loveText"></p>
+    <h1>Love You Birali ❤️</h1>
+    <h2>Will You Be My Valentine? 💍</h2>
+
+    <div class="button-container">
+        <a href="ww.html"><button id="yesBtn" class="btn"  onclick="goToSecond()">Yes ❤️</button></a>
+        <button id="noBtn" class="btn">No 💔</button>
+    </div>
+</div>
+
+<script>
+
+// Netflix Intro
+setTimeout(()=>{
+    document.getElementById("intro").style.display="none";
+    document.getElementById("lockScreen").style.display="flex";
+},2000);
+
+// Unlock
+function unlock(){
+    let pass=document.getElementById("password").value;
+    if(pass==="sanu"){
+        document.getElementById("lockScreen").style.display="none";
+        document.getElementById("questionPage").style.display="flex";
+    }else{
+        document.getElementById("error").innerText="Wrong password 💔";
+    }
+}
+
+// YES
+function goToSecond(){
+    document.getElementById("questionPage").style.display="none";
+    document.getElementById("secondPage").style.display="flex";
+    startCountdown();
+}
+
+// NO button run away
+let noBtn=document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover",function(){
+    let x=Math.random()*200;
+    let y=Math.random()*60;
+    noBtn.style.left=x+"px";
+    noBtn.style.top=y+"px";
+});
+
+// Typing effect
+const text="My love, you are the most beautiful part of my life. Your smile brightens my darkest days and your love makes my world complete. This little surprise is just for you 💖. Because you deserve to feel as special as you make me feel every single day. You are the calm in my chaos, the strength behind my confidence, and the reason my heart feels so full. When I look at you, I see my best friend, my biggest blessing, and the person I want to share every laugh, every dream, and every future moment with. You don’t just make my life better — you make it meaningful. Loving you feels natural, effortless, and endlessly beautiful. No matter how much time passes, my heart will always choose you, again and again. 💕";
+let i=0;
+function typing(){
+    if(i<text.length){
+        document.getElementById("loveText").innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(typing,30);
+    }
+}
+typing();
+
+
+</script>
+
+</body>
+</html>

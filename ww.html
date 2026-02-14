@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Forever 💘</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ff4d94,#ff99cc);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* Floating hearts */
+.heart{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    animation:floatUp 6s linear infinite;
+    opacity:0.7;
+}
+
+@keyframes floatUp{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-110vh);}
+}
+
+h1{
+    margin-top:30px;
+    font-size:32px;
+    animation:fadeIn 2s ease-in-out;
+}
+
+p{
+    max-width:1400px;
+    padding:0 10px;
+    line-height:1.6;
+    font-size:18px;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.gallery-container{
+    margin-top:10px;
+    width:90%;
+    max-width:400px;
+    position:relative;
+}
+
+.slider{
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    width:100%;
+    display:none;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    cursor:pointer;
+}
+
+.slide.active{
+    display:block;
+    animation:fade 1s ease-in-out;
+}
+
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* Dots */
+.dots{
+    text-align:center;
+    margin-top:10px;
+}
+
+.dot{
+    height:10px;
+    width:10px;
+    margin:5px;
+    background:white;
+    border-radius:50%;
+    display:inline-block;
+    opacity:0.5;
+    cursor:pointer;
+}
+
+.dot.active{
+    opacity:1;
+}
+
+
+/* Fullscreen popup */
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
+}
+
+
+/* Button */
+button{
+    padding:14px 35px;
+    margin-top:30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4d94;
+    font-size:1em;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ffe6f2;
+    transform:scale(1.05);
+}
+
+#finalMsg{
+    margin-top:15px;
+    font-size:24px;
+    font-weight:bold;
+    animation:fadeIn 1s ease-in-out;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<h1>I Knew It! You Love Me 😘💖</h1>
+
+<p>
+You are my happiness, my peace, my safe place and my forever.
+Every heartbeat of mine whispers your name ❤️. From the moment you came into my life, everything started to feel brighter and more meaningful. You make my worst days better and my best days unforgettable. Your smile is my favorite sight, your voice is my favorite sound, and your presence is my greatest comfort. With you, I don’t just feel love. I feel understood, supported, and truly alive. You are not just my today, you are every tomorrow I dream about. No matter what happens, no matter where life takes us, I promise to stand beside you, hold your hand, and love you more with each passing day. You are my once in a lifetime, my forever Valentine, my everything. ❤️💍
+</p>
+
+<div class="gallery-container">
+
+    <div class="slider">
+        <img src="WhatsApp Image 2026-02-14 at 4.11.10 PM.jpeg" class="slide active">
+        <img src="WhatsApp Image 2026-02-14 at 4.11.57 PM.jpeg" class="slide">
+        <img src="e.jpeg" class="slide" style="width: 500px;height: 500px;">
+    </div>
+
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</div>
+
+<!-- Fullscreen Popup -->
+<div id="popup" class="popup">
+    <img id="popupImg">
+</div>
+
+<button onclick="finalSurprise()">Final Surprise 💝</button>
+
+<h3 id="finalMsg"></h3>
+
+
+<!-- Music Button -->
+<button onclick="playMusic()" id="musicBtn">🎵 Play Our Song</button>
+
+<audio id="bgMusic" loop>
+   <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function finalSurprise(){
+    document.getElementById("finalMsg").innerHTML="I LOVE YOU FOREVER Babe❤️💍";
+}
+
+/* Floating hearts generator */
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(15+Math.random()*25)+"px";
+    heart.style.animationDuration=(4+Math.random()*3)+"s";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{heart.remove();},6000);
+}
+
+function playMusic(){
+    var music = document.getElementById("bgMusic");
+    music.play();
+    document.getElementById("musicBtn").innerHTML = "💖 Playing...";
+}
+let slides=document.querySelectorAll(".slide");
+let dots=document.querySelectorAll(".dot");
+let index=0;
+
+/* Auto Slide */
+function showSlide(i){
+    slides.forEach(s=>s.classList.remove("active"));
+    dots.forEach(d=>d.classList.remove("active"));
+
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
+}
+
+function nextSlide(){
+    index++;
+    if(index>=slides.length){ index=0; }
+    showSlide(index);
+}
+
+setInterval(nextSlide,3000);
+
+/* Dot click */
+dots.forEach((dot,i)=>{
+    dot.addEventListener("click",()=>{
+        index=i;
+        showSlide(index);
+    });
+});
+
+/* Fullscreen popup */
+slides.forEach(img=>{
+    img.addEventListener("click",()=>{
+        document.getElementById("popup").style.display="flex";
+        document.getElementById("popupImg").src=img.src;
+    });
+});
+
+document.getElementById("popup").addEventListener("click",()=>{
+    document.getElementById("popup").style.display="none";
+});
+
+
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
